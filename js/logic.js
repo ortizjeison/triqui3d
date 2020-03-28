@@ -73,7 +73,7 @@ function check_position(M, pos) {
     return ans;    
 }
 
-//Set Jugada
+//Set Jugada, recibe M, pos, y el jugador
 function update_position(M, pos, player) {
     if (check_position(M,pos)==0) {
         switch (pos) {
