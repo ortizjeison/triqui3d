@@ -20,13 +20,13 @@ function clear_board(M){
     M[3].fill(0,1,4);
 }
 
+//Retorna el valor actual de la pos en la matriz M
 //Recibe Matriz M y la posición numérica. Ej: A,9
 // +---+---+---+
 // | 1 | 2 | 3 |
 // | 4 | 5 | 6 |
 // | 7 | 8 | 9 |
 // +---+---+---+
-//Retorna el valor actual
 function check_position(M, pos) {
     ans = -1;
     switch (pos) {
@@ -73,6 +73,7 @@ function check_position(M, pos) {
     return ans;    
 }
 
+//Set Jugada
 function update_position(M, pos, player) {
     if (check_position(M,pos)==0) {
         switch (pos) {
@@ -108,6 +109,6 @@ function update_position(M, pos, player) {
                 break;
         }
     } else {
-        console.log("La posición está llena beibi");
+        console.log("La casilla está llena beibi");
     }
 }
