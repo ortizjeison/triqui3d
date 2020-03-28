@@ -1,19 +1,29 @@
 function create_board() {
-    //Create Level A
+    //Crear Boards
     var A = new Array(4);
     A[1] = new Array(4);
     A[2] = new Array(4);
     A[3] = new Array(4);
 
-    //Create player
+    var B= new Array(4);
+    B[1] = new Array(4);
+    B[2] = new Array(4);
+    B[3] = new Array(4);
+
+    var C = new Array(4);
+    C[1] = new Array(4);
+    C[2] = new Array(4);
+    C[3] = new Array(4);
+
+    //Limpiar boards
     clear_board(A);
+    clear_board(B);
+    clear_board(C);
 
     console.log(A[1][3]);
-    //console.log(A[3][3]);
-    //check_position(A,1)
 }
 
-//Set all Board M as 0
+//Set todas las posiciones del Board M = 0
 function clear_board(M){
     M[1].fill(0,1,4);
     M[2].fill(0,1,4);
