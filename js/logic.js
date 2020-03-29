@@ -16,14 +16,10 @@ C[3] = new Array(4);
 
 
 function create_board() {
-
-
     //Limpiar boards
     clear_board(A);
     clear_board(B);
     clear_board(C);
-
-    console.log(C[1][3]);
 }
 
 //Set todas las posiciones del Board M = 0
@@ -128,6 +124,7 @@ function update_position(M, pos, player) {
     }
 }
 
+//Imprimir Tablero M en consola.
 function print_board(M) {
     console.log("| "+check_position(M, 1)+" | "+check_position(M, 2)+" | "+check_position(M, 3)+" |");
     console.log("| "+check_position(M, 4)+" | "+check_position(M, 5)+" | "+check_position(M, 6)+" |");
