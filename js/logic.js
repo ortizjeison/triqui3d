@@ -131,6 +131,21 @@ function print_board(M) {
     console.log("| "+check_position(M, 7)+" | "+check_position(M, 8)+" | "+check_position(M, 9)+" |");
 }
 
+function print_boards() {
+    console.log("A:");
+    console.log("| "+check_position(A, 1)+" | "+check_position(A, 2)+" | "+check_position(A, 3)+" |");
+    console.log("| "+check_position(A, 4)+" | "+check_position(A, 5)+" | "+check_position(A, 6)+" |");
+    console.log("| "+check_position(A, 7)+" | "+check_position(A, 8)+" | "+check_position(A, 9)+" |");
+    console.log("B:");
+    console.log("| "+check_position(B, 1)+" | "+check_position(B, 2)+" | "+check_position(B, 3)+" |");
+    console.log("| "+check_position(B, 4)+" | "+check_position(B, 5)+" | "+check_position(B, 6)+" |");
+    console.log("| "+check_position(B, 7)+" | "+check_position(B, 8)+" | "+check_position(B, 9)+" |");
+    console.log("C:");
+    console.log("| "+check_position(C, 1)+" | "+check_position(C, 2)+" | "+check_position(C, 3)+" |");
+    console.log("| "+check_position(C, 4)+" | "+check_position(C, 5)+" | "+check_position(C, 6)+" |");
+    console.log("| "+check_position(C, 7)+" | "+check_position(C, 8)+" | "+check_position(C, 9)+" |");
+}
+
 //CHECK WINNER
 //check_winnerZ : Si hay ganador en el eje Z (No recibe parámetros)
 //Check_winnerH(M): Si hay ganador horizontal en el Board M.
