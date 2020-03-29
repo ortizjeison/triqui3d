@@ -123,6 +123,7 @@ function move(M, pos, player) {
     } else {
         console.log("La casilla está llena beibi");
     }
+    print_board(M);
 }
 
 //Imprimir Tablero M en consola.
@@ -201,13 +202,13 @@ function check_winnerV(M) {
 
 function check_winnerD(M) {
 
-    if(check_position(M,1)==check_position(M,5) && check_position(M,5)==check_position(M,9)){
+    if(check_position(M,1)==check_position(M,5) && check_position(M,5)==check_position(M,9) && check_position(M,1)!=0){
         console.log(check_position(M,1)+" Diagonal Principal");
-        return check_position(M,2);
+        return check_position(M,1);
     }
-    if(check_position(M,3)==check_position(M,5) && check_position(M,5)==check_position(M,7)){
-        console.log(check_position(M,1)+" Diagonal Secundaria");
-        return check_position(M,2);
+    if(check_position(M,3)==check_position(M,5) && check_position(M,5)==check_position(M,7) && check_position(M,3)!=0){
+        console.log(check_position(M,3)+" Diagonal Secundaria");
+        return check_position(M,3);
     }
     return -1;
 }
