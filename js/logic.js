@@ -128,13 +128,67 @@ function update_position(M, pos, player) {
     }
 }
 
-function check_winner() {
+function print_board(M) {
+    console.log("| "+check_position(M, 1)+" | "+check_position(M, 2)+" | "+check_position(M, 3)+" |");
+    console.log("| "+check_position(M, 4)+" | "+check_position(M, 5)+" | "+check_position(M, 6)+" |");
+    console.log("| "+check_position(M, 7)+" | "+check_position(M, 8)+" | "+check_position(M, 9)+" |");
+}
+
+//CHECK WINNER
+//check_winnerZ : Si hay ganador en el eje Z (No recibe parámetros)
+//Check_winnerH(M): Si hay ganador horizontal en el Board M.
+//Check_winnerV(M): Si hay ganador Vertical en el Board M.
+//Check_winnerD(M): Si hay ganador Diagonal en el Board M.
+
+function check_winnerZ() {
     ans = -1;
-    for(i=0;i<4;i++){
+    for(i=1;i<4;i++){
+        console.log(i);
         //Eje Z
         if(check_position(A,i)==check_position(B,i) && check_position(B,i)==check_position(C,i) && check_position(C,i)!=0){
-            ans=check_position(A,i);
+            return check_position(A,i);
             console.log("Ganó alguien en el eje Z="+i);
         }
     }
+}
+
+function check_winnerH(M) {
+
+    if(check_position(M,1)==check_position(M,2) && check_position(M,2)==check_position(M,3)){
+        return check_position(M,2);
+    }
+    if(check_position(M,4)==check_position(M,5) && check_position(M,5)==check_position(M,6)){
+        return check_position(M,2);
+    }
+    if(check_position(M,7)==check_position(M,8) && check_position(M,8)==check_position(M,9)){
+        return check_position(M,2);
+    }
+    return -1;
+}
+
+function check_winnerV(M) {
+
+    if(check_position(M,1)==check_position(M,4) && check_position(M,4)==check_position(M,7)){
+        return check_position(M,2);
+    }
+    if(check_position(M,2)==check_position(M,5) && check_position(M,5)==check_position(M,8)){
+        return check_position(M,2);
+    }
+    if(check_position(M,3)==check_position(M,6) && check_position(M,6)==check_position(M,9)){
+        return check_position(M,2);
+    }
+    return -1;
+}
+
+function check_winnerD(M) {
+
+    if(check_position(M,1)==check_position(M,5) && check_position(M,5)==check_position(M,9)){
+        return check_position(M,2);
+        console.log(check_position(M,1)+"Diagonal Principal");
+    }
+    if(check_position(M,3)==check_position(M,5) && check_position(M,5)==check_position(M,7)){
+        return check_position(M,2);
+        console.log(check_position(M,1)+"Diagonal Secundaria");
+    }
+    return -1;
 }
