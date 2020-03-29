@@ -33,11 +33,12 @@ function clear_board(M){
 //Retorna el valor actual de la pos en la matriz M
 //Recibe Matriz M y la posición numérica. Ej: A,9
 //Retorna el jugador
-// +---+---+---+
-// | 1 | 2 | 3 |
-// | 4 | 5 | 6 |
-// | 7 | 8 | 9 |
-// +---+---+---+
+//      (1) (2) (3)
+//     +---+---+---+
+// (1) | 1 | 2 | 3 |
+// (2) | 4 | 5 | 6 |
+// (3) | 7 | 8 | 9 |
+//     +---+---+---+
 function check_position(M, pos) {
     ans = -1;
     switch (pos) {
@@ -85,7 +86,7 @@ function check_position(M, pos) {
 }
 
 //Set Jugada, recibe M, pos, y el jugador
-function update_position(M, pos, player) {
+function move(M, pos, player) {
     if (check_position(M,pos)==0) {
         switch (pos) {
             case 1:
@@ -154,20 +155,22 @@ function print_boards() {
 
 function check_winnerZ() {
     ans = -1;
-    for(i=1;i<4;i++){
-        console.log(i);
+    for(i=1;i<10;i++){
+        //console.log(i);
         //Eje Z
         if(check_position(A,i)==check_position(B,i) && check_position(B,i)==check_position(C,i) && check_position(C,i)!=0){
-            return check_position(A,i);
+            ans = check_position(A,i);
             console.log("Ganó alguien en el eje Z="+i);
         }
     }
+    console.log("ans = "+ans);
+    return ans;
 }
 
 function check_winnerH(M) {
-
+    ans = -1;
     if(check_position(M,1)==check_position(M,2) && check_position(M,2)==check_position(M,3)){
-        return check_position(M,2);
+        ans = 1;
     }
     if(check_position(M,4)==check_position(M,5) && check_position(M,5)==check_position(M,6)){
         return check_position(M,2);
@@ -179,7 +182,6 @@ function check_winnerH(M) {
 }
 
 function check_winnerV(M) {
-
     if(check_position(M,1)==check_position(M,4) && check_position(M,4)==check_position(M,7)){
         return check_position(M,2);
     }
@@ -195,12 +197,12 @@ function check_winnerV(M) {
 function check_winnerD(M) {
 
     if(check_position(M,1)==check_position(M,5) && check_position(M,5)==check_position(M,9)){
+        console.log(check_position(M,1)+" Diagonal Principal");
         return check_position(M,2);
-        console.log(check_position(M,1)+"Diagonal Principal");
     }
     if(check_position(M,3)==check_position(M,5) && check_position(M,5)==check_position(M,7)){
+        console.log(check_position(M,1)+" Diagonal Secundaria");
         return check_position(M,2);
-        console.log(check_position(M,1)+"Diagonal Secundaria");
     }
     return -1;
 }
