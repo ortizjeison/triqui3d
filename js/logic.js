@@ -27,7 +27,7 @@ function clear_board(M){
     M[1].fill(0,1,4);
     M[2].fill(0,1,4);
     M[3].fill(0,1,4);
-    console.log("listo");   
+    //console.log("listo");   
 }
 
 //Retorna el valor actual de la pos en la matriz M
