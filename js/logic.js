@@ -168,28 +168,33 @@ function check_winnerZ() {
 }
 
 function check_winnerH(M) {
-    ans = -1;
-    if(check_position(M,1)==check_position(M,2) && check_position(M,2)==check_position(M,3)){
-        ans = 1;
+    if(check_position(M,1)==check_position(M,2) && check_position(M,2)==check_position(M,3) && check_position(M,1)!=0){
+        console.log("Ganó "+ check_position(M,1)+" en (1)");
+        return check_position(M,1);
     }
-    if(check_position(M,4)==check_position(M,5) && check_position(M,5)==check_position(M,6)){
-        return check_position(M,2);
+    if(check_position(M,4)==check_position(M,5) && check_position(M,5)==check_position(M,6) && check_position(M,4)!=0){
+        console.log("Ganó "+ check_position(M,4)+" en (2)");
+        return check_position(M,4);
     }
-    if(check_position(M,7)==check_position(M,8) && check_position(M,8)==check_position(M,9)){
-        return check_position(M,2);
+    if(check_position(M,7)==check_position(M,8) && check_position(M,8)==check_position(M,9) && check_position(M,7)!=0){
+        console.log("Ganó "+ check_position(M,7)+" en (3)");
+        return check_position(M,7);
     }
     return -1;
 }
 
 function check_winnerV(M) {
-    if(check_position(M,1)==check_position(M,4) && check_position(M,4)==check_position(M,7)){
+    if(check_position(M,1)==check_position(M,4) && check_position(M,4)==check_position(M,7) && check_position(M,7)!=0){
+        console.log("Ganó "+ check_position(M,1)+" en (1)");
+        return check_position(M,1);
+    }
+    if(check_position(M,2)==check_position(M,5) && check_position(M,5)==check_position(M,8) && check_position(M,8)!=0){
+        console.log("Ganó "+ check_position(M,2)+" en (2)");
         return check_position(M,2);
     }
-    if(check_position(M,2)==check_position(M,5) && check_position(M,5)==check_position(M,8)){
-        return check_position(M,2);
-    }
-    if(check_position(M,3)==check_position(M,6) && check_position(M,6)==check_position(M,9)){
-        return check_position(M,2);
+    if(check_position(M,3)==check_position(M,6) && check_position(M,6)==check_position(M,9) && check_position(M,9)!=0){
+        console.log("Ganó "+ check_position(M,3)+" en (3)");
+        return check_position(M,3);
     }
     return -1;
 }
