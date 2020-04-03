@@ -159,12 +159,16 @@ function check_winnerZ() {
     for(i=1;i<10;i++){
         //console.log(i);
         //Eje Z
-        if(check_position(A,i)==check_position(B,i) && check_position(B,i)==check_position(C,i) && check_position(C,i)!=0){
+        if(check_position(A,i)==check_position(B,i) && check_position(B,i)==check_position(C,i) && check_position(A,i)!=0){
             ans = check_position(A,i);
             console.log("Ganó alguien en el eje Z="+i);
         }
     }
-    console.log("ans = "+ans);
+    if(ans==0){
+        ans=-1;
+        console.log("Meeeen, no ha ganado nadieee");
+    }
+    
     return ans;
 }
 
