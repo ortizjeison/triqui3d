@@ -2,7 +2,9 @@
 Sistema de referencia de las posiciones para todos los tableros:
 
 | **1** | **2** | **3** |
+
 | **4** | **5** | **6** |
+
 | **7** | **8** | **9** |
 
 Valores de las casillas:
@@ -16,18 +18,14 @@ Valores de las casillas:
 ***Iniciar el juego***
     start();
 Crea los arrays de los tableros vacíos:
-A:
+A=B=C=
+
 | 0 | 0 | 0 |
+
 | 0 | 0 | 0 |
+
 | 0 | 0 | 0 |
-B:
-| 0 | 0 | 0 |
-| 0 | 0 | 0 |
-| 0 | 0 | 0 |
-C:
-| 0 | 0 | 0 |
-| 0 | 0 | 0 |
-| 0 | 0 | 0 |
+
 
 ***Nueva Jugada***
 
@@ -57,15 +55,29 @@ C:
 > 1: Jugador 1. 
 > 2: Jugador 2.
 
-`clear_board(T);` Limpia (llena de 0) el tablero **T**.
-`print_board(T);` Imprime el Tablero **T** en consola. 
-`print_boards();` Imprime todos los tableros en consola.
+Limpia (llena de 0) el tablero **T**:
+
+    clear_board(T);
+
+Imprime el Tablero **T** en consola:
+
+    print_board(T);
+
+Imprime todos los tableros en consola.
+
+    print_boards();
+
+
 
 ## winner.js :
 Sistema de referencia.
->----**1**---**2**--**3**
+
+--- **1**-- **2**--**3**
+
 **1:** | 1 | 2 | 3 |
+
 **2:** | 4 | 5 | 6 |
+
 **3:** | 7 | 8 | 9 |
 
 
