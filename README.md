@@ -20,11 +20,11 @@ Valores de las casillas:
 Crea los arrays de los tableros vacíos:
 A=B=C=
 
-| 0 | 0 | 0 |
+| **0** | **0** | **0** |
 
-| 0 | 0 | 0 |
+| **0** | **0** | **0** |
 
-| 0 | 0 | 0 |
+| **0** | **0** | **0** |
 
 
 ***Nueva Jugada***
