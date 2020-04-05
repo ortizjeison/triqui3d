@@ -32,8 +32,11 @@ A=B=C=
     move(Tablero,posición,jugador);
 
 **Recibe:**
+
 >  Tablero: [**A, B , C**]
+
 >  La posición: [1,9]
+
 >  Jugador (1,2):
 
 **Retorna:**
@@ -52,7 +55,9 @@ A=B=C=
 **Retorna el valor actual de la casilla:**
 
 > 0: Vacío 
+
 > 1: Jugador 1. 
+
 > 2: Jugador 2.
 
 Limpia (llena de 0) el tablero **T**:
@@ -85,23 +90,40 @@ Sistema de referencia.
 
     check_winnerZ();
  **Devuelve:**
+
 > -1: No hay ganador 
+
 > 1: Jugador 1. 
+
 > 2: Jugador 2.
+
 >Si hay ganador Imprime en consola **Ganó *(jugador)* en el eje Z *(posición)***
 
 ***Ganador en alguna Fila del tablero T***
+
 check_winnerH(T);
+
 ***Ganador en alguna Columna del tablero T***
+
 check_winnerV(T);
+
  **Devuelven:**
+
 > 1: Jugador 1. 
+
 > 2: Jugador 2.
+
 >Si hay ganador Imprime en consola **Ganó *(jugador)* en  *[1-3]***
 
+
 ***Ganador en alguna Diagonal del tablero T***
+
 check_winnerD(T);
+
  **Devuelve:**
-> 1: Jugador 1. 
+
+> 1: Jugador 1.
+ 
 > 2: Jugador 2.
+
 >Si hay ganador Imprime en consola **Ganó *(jugador)* en la diagonal *(Principal, Secundaria)***
