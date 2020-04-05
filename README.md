@@ -18,6 +18,7 @@ Valores de las casillas:
 ***Iniciar el juego***
     start();
 Crea los arrays de los tableros vacíos:
+
 A=B=C=
 
 | **0** | **0** | **0** |
