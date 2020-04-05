@@ -112,6 +112,8 @@ Sistema de referencia.
     check_winnerV(T);
 
  **Devuelven:**
+ 
+> -1: No hay ganador. 
 
 > 1: Jugador 1. 
 
@@ -125,6 +127,8 @@ Sistema de referencia.
     check_winnerD(T);
 
  **Devuelve:**
+ 
+> -1: No hay ganador. 
 
 > 1: Jugador 1.
  
