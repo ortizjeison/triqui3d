@@ -77,6 +77,8 @@ Imprime todos los tableros en consola.
 ## winner.js :
 Sistema de referencia.
 
+
+
 --- **1**-- **2**--**3**
 
 **1:** | 1 | 2 | 3 |
@@ -101,11 +103,12 @@ Sistema de referencia.
 
 ***Ganador en alguna Fila del tablero T***
 
-check_winnerH(T);
+    check_winnerH(T);
+
 
 ***Ganador en alguna Columna del tablero T***
 
-check_winnerV(T);
+    check_winnerV(T);
 
  **Devuelven:**
 
@@ -118,7 +121,7 @@ check_winnerV(T);
 
 ***Ganador en alguna Diagonal del tablero T***
 
-check_winnerD(T);
+    check_winnerD(T);
 
  **Devuelve:**
 
