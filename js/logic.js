@@ -31,14 +31,17 @@ function clear_board(M){
 }
 
 //Retorna el valor actual de la pos en la matriz M
-//Recibe Matriz M y la posición numérica. Ej: A,9
+//Recibe Matriz M y la posición numérica. 
+
+//Ej: A,9
 //Retorna el jugador
 //      (1) (2) (3)
+//A=   +---+---+---+
+// (1) | 1 | 2 | 3  |
+// (2) | 4 | 5 | 6  |
+// (3) | 7 | 8 | 9* |
 //     +---+---+---+
-// (1) | 1 | 2 | 3 |
-// (2) | 4 | 5 | 6 |
-// (3) | 7 | 8 | 9 |
-//     +---+---+---+
+
 function check_position(M, pos) {
     ans = -1;
     switch (pos) {
@@ -168,7 +171,7 @@ function check_winnerZ() {
         ans=-1;
         console.log("Meeeen, no ha ganado nadieee");
     }
-    
+
     return ans;
 }
 
