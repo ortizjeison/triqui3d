@@ -41,8 +41,9 @@ A=B=C=
 >  Jugador (1,2):
 
 **Retorna:**
-    True: Se ejecutó el movimiento
-    False: No se ejecutó el movimiento, la casilla está ocupada.
+>  True: Se ejecutó el movimiento
+
+>  False: No se ejecutó el movimiento, la casilla está ocupada.
 
 ***Verificar Casilla***
 
@@ -51,6 +52,7 @@ A=B=C=
 **Recibe:**
 
 >  Tablero: (**A, B** o **C**)
+
 >  La posición: [1,9]
 
 **Retorna el valor actual de la casilla:**
