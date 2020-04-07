@@ -137,3 +137,6 @@ Sistema de referencia.
 > 2: Jugador 2.
 
 >Si hay ganador Imprime en consola **Ganó *(jugador)* en la diagonal *(Principal, Secundaria)***
+
+
+![Ejemplo de un juego](link-to-image)
