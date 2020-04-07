@@ -141,4 +141,5 @@ Sistema de referencia.
 
 Un ejemplo de juego (de un solo jugador :v) en la consola.
 
-![Ejemplo de un juego](https://raw.githubusercontent.com/ortizjeison/triqui3d/master/play.png?token=AB7QLPNY5FYALN7HND3TK7S6RQD3M)
+
+![Ejemplo de un juego](https://github.com/ortizjeison/triqui3d/blob/master/play.png)
