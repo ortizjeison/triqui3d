@@ -41,8 +41,9 @@ A=B=C=
 >  Jugador (1,2):
 
 **Retorna:**
-    True: Se ejecutó el movimiento
-    False: No se ejecutó el movimiento, la casilla está ocupada.
+>  True: Se ejecutó el movimiento
+
+>  False: No se ejecutó el movimiento, la casilla está ocupada.
 
 ***Verificar Casilla***
 
@@ -51,6 +52,7 @@ A=B=C=
 **Recibe:**
 
 >  Tablero: (**A, B** o **C**)
+
 >  La posición: [1,9]
 
 **Retorna el valor actual de la casilla:**
@@ -135,3 +137,6 @@ Sistema de referencia.
 > 2: Jugador 2.
 
 >Si hay ganador Imprime en consola **Ganó *(jugador)* en la diagonal *(Principal, Secundaria)***
+
+
+![Ejemplo de un juego](link-to-image)
