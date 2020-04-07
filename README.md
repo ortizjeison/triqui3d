@@ -139,4 +139,4 @@ Sistema de referencia.
 >Si hay ganador Imprime en consola **Ganó *(jugador)* en la diagonal *(Principal, Secundaria)***
 
 
-![Ejemplo de un juego](link-to-image)
+![Ejemplo de un juego](https://raw.githubusercontent.com/ortizjeison/triqui3d/master/play.png?token=AB7QLPNY5FYALN7HND3TK7S6RQD3M)
