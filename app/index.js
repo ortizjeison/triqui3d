@@ -22,7 +22,8 @@
     document.body.appendChild(renderer.domElement);
   
     material = new THREE.MeshPhongMaterial({
-      wireframe: true
+      wireframe: true,
+      color:0xf49700
     });
   
     light = new THREE.DirectionalLight(0xffffff, 1.1);
