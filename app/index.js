@@ -2,16 +2,13 @@
 (function() {
     var D, aspect, camera, height, light, loader, material, renderer, scene, width;
   
-    width = 960;
-  
-    height = 500;
-  
+    width = 1200;
+    height = 700;
+
     aspect = width / height;
+    D = 20;
   
-    D = 8;
-  
-    scene = new THREE.Scene();
-  
+    scene = new THREE.Scene();  
     camera = new THREE.OrthographicCamera(-D * aspect, D * aspect, D, -D, 1, 1000);
   
     renderer = new THREE.WebGLRenderer({
@@ -19,7 +16,6 @@
     });
   
     renderer.setSize(width, height);
-  
     document.body.appendChild(renderer.domElement);
   
     material = new THREE.MeshPhongMaterial({
@@ -27,9 +23,7 @@
     });
   
     light = new THREE.DirectionalLight(0xffffff, 1.1);
-  
     light.position.set(10, 20, 15);
-  
     scene.add(light);
   
     camera.position.set(20, 20, 20);
