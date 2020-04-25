@@ -1,3 +1,10 @@
+# Cosas Útiles
+
+> <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+> <script src="https://triqui.cf/app/js/OrbitControls.js"></script>
+> <script src="https://cdn.rawgit.com/mrdoob/three.js/r69/examples/js/loaders/ColladaLoader.js"></script>
+
+
 # TRIKI 3D
 Sistema de referencia de las posiciones para todos los tableros:
 
