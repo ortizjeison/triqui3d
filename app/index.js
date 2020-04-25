@@ -25,7 +25,8 @@ camera = new THREE.OrthographicCamera(-D * aspect, D * aspect, D, -D, 1, 1000);
     document.body.appendChild(renderer.domElement);
   
     material = new THREE.MeshPhongMaterial({
-      wireframe: true
+      wireframe: true,
+      color:0xf49700
     });
   
     light = new THREE.DirectionalLight(0xffffff, 1.1);
