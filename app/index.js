@@ -40,7 +40,7 @@
   
     loader = new THREE.ColladaLoader();
   
-    loader.load('http://triqui.cf/app/assets/test.dae', function(collada) {
+    loader.load('https://triqui.cf/app/assets/test.dae', function(collada) {
       collada.scene.scale.set(0.1, 0.1, 0.1);
       scene.add(collada.scene);
       return renderer.render(scene, camera);
