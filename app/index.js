@@ -2,8 +2,11 @@
 (function() {
     var D, aspect, camera, height, light, loader, material, renderer, scene, width;
   
-    width = 1200;
-    height = 700;
+    width = window.screen.width;
+    height = window.screen.height;
+    
+    console.log(window.screen.width);
+    console.log(window.screen.height);
 
     aspect = width / height;
     D = 20;
@@ -39,5 +42,11 @@
       scene.add(collada.scene);
       return renderer.render(scene, camera);
     });
-  
+
+    loader.load('https://triqui.cf/app/assets/mesas.dae', function(collada) {
+      collada.scene.scale.set(0.1, 0.1, 0.1);
+      scene.add(collada.scene);
+      return renderer.render(scene, camera);
+    });
+
   }).call(this);
