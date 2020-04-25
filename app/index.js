@@ -43,7 +43,8 @@
       return renderer.render(scene, camera);
     });
 
-    loader.load('https://triqui.cf/app/assets/mesas.dae', function(collada) {
+    loader2 = new THREE.ColladaLoader();
+    loader2.load('https://triqui.cf/app/assets/mesas.dae', function(collada) {
       collada.scene.scale.set(0.1, 0.1, 0.1);
       scene.add(collada.scene);
       return renderer.render(scene, camera);
