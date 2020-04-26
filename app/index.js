@@ -43,9 +43,6 @@ camera = new THREE.OrthographicCamera(-D * aspect, D * aspect, D, -D, 1, 1000);
     camera.rotation.z = 5 / 6 * Math.PI;
   
     loader = new THREE.ColladaLoader();
-
-
-  
     loader.load('https://triqui.cf/app/assets/test.dae', function(collada) {
       collada.scene.scale.set(0.1, 0.1, 0.1);
       scene.add(collada.scene);
