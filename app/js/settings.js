@@ -19,6 +19,9 @@ camera.position.set(2, 2, 2);
 camera.lookAt(new THREE.Vector3(0, 0, 0));
 camera.rotation.z = 5 / 6 * Math.PI;
 
+//Axis
+var axesHelper = new THREE.AxesHelper(2);
+scene.add( axesHelper );
 
 //Responsive Function
 window.addEventListener('resize', function() {
