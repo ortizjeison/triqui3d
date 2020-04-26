@@ -6,6 +6,17 @@ renderer.setClearColor( 0xffffff );
 renderer.setSize( window.innerWidth, window.innerHeight );//establecer el tamaño en el que queremos que muestre nuestra aplicación
 document.body.appendChild(renderer.domElement);
 
+//Responsive Function
+window.addEventListener('resize', function() {
+    var width= window.innerWidth;
+    var height = window.innerHeight;
+    renderer.setSize(width,height);
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+});
+
+//Light
+
 light = new THREE.DirectionalLight(0xffffff, 1.1);
 light.position.set(10, 20, 15);
 scene.add(light);
@@ -13,3 +24,4 @@ scene.add(light);
 camera.position.set(2, 2, 2);
 camera.lookAt(new THREE.Vector3(0, 0, 0));
 camera.rotation.z = 5 / 6 * Math.PI;
+
