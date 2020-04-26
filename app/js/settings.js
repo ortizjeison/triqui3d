@@ -8,7 +8,6 @@ document.body.appendChild(renderer.domElement);
 
 //Orbit Controls
 controls = new THREE.OrbitControls(camera, renderer.domElement);
-controls.update();
 
 
 //Light
