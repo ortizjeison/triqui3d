@@ -1,9 +1,12 @@
 
 //CHECK WINNER
-//CheckWinnerZ : Si hay ganador en el eje Z (No recibe parámetros)
 //CheckWinnerH(M): Si hay ganador horizontal en el Board M.
 //CheckWinnerV(M): Si hay ganador Vertical en el Board M.
 //CheckWinnerD(M): Si hay ganador Diagonal en el Board M.
+//CheckWinnerZ : Si hay ganador en el eje Z (No recibe parámetros)
+//CheckWinnerHZ : Si hay ganador en alguna horizontal del eje Z (No recibe parámetros)
+//CheckWinnerVZ : Si hay ganador en alguna vertical del eje Z (No recibe parámetros)
+//CheckWinnerDZ : Si hay ganador en alguna diagonal del eje Z (No recibe parámetros)
 
 function CheckWinnerH(M) {
     if(check(M,1)==check(M,2) && check(M,2)==check(M,3) && check(M,1)!=0){
