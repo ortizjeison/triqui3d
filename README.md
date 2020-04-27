@@ -1,10 +1,10 @@
 # Cosas Útiles
 
-> <script src="https://triqui.cf/app/js/lib/three.js"></script>
+> threejs core: https://triqui.cf/app/js/lib/three.js
 
-> <script src="https://triqui.cf/app/js/lib/OrbitControls.js"></script>
+> Orbit Controls: https://triqui.cf/app/js/lib/OrbitControls.js
 
-> <script src="https://triqui.cf/app/js/lib/ColladaLoader.js"></script>
+> Collada Loader: https://triqui.cf/app/js/lib/ColladaLoader.js
 
 # Factor de conversión:
 > en Threejs 1 unidad = 100mm en Sketchup (factor = 0.2538555 )
