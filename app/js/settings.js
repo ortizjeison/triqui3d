@@ -11,7 +11,7 @@ controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 //Light
 light = new THREE.DirectionalLight(0xffffff, 1.1);
-light.position.set(0, 20, 0);
+light.position.set(20, 20, 20);
 scene.add(light);
 
 //Set Camera position
