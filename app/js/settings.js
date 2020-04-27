@@ -12,13 +12,13 @@ controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 //Light
 light = new THREE.DirectionalLight(0xffffff, 1.1);
-light.position.set(20, 20, 20);
+light.position.set(10,10,10);
 scene.add(light);
 
 //Set Camera position
-camera.position.set(0, 5, 0);
+camera.position.set(2,2,2);
 camera.lookAt(new THREE.Vector3(0, 0, 0));
-camera.rotation.z = 5 / 6 * Math.PI;
+//camera.rotation.z = 5 / 6 * Math.PI;
 
 //Axis
 var axesHelper = new THREE.AxesHelper(1);
