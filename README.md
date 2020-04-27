@@ -1,11 +1,13 @@
 # Cosas Útiles
 
-> <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+> <script src="https://triqui.cf/app/js/lib/three.js"></script>
 
-> <script src="https://triqui.cf/app/js/OrbitControls.js"></script>
+> <script src="https://triqui.cf/app/js/lib/OrbitControls.js"></script>
 
-> <script src="https://cdn.rawgit.com/mrdoob/three.js/r69/examples/js/loaders/ColladaLoader.js"></script>
+> <script src="https://triqui.cf/app/js/lib/ColladaLoader.js"></script>
 
+# Factor de conversión:
+> en Threejs 1 unidad = 100mm en Sketchup (factor = 0.2538555 )
 
 # TRIKI 3D
 Sistema de referencia de las posiciones para todos los tableros:
