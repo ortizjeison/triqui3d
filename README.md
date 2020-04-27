@@ -104,7 +104,7 @@ Sistema de referencia.
 
 ***Ganador en el eje Z***
 
-    check_winnerZ();
+    CheckWinnerZ();
  **Devuelve:**
 
 > -1: No hay ganador 
@@ -117,12 +117,12 @@ Sistema de referencia.
 
 ***Ganador en alguna Fila del tablero T***
 
-    check_winnerH(T);
+    CheckWinnerH(T);
 
 
 ***Ganador en alguna Columna del tablero T***
 
-    check_winnerV(T);
+    CheckWinnerV(T);
 
  **Devuelven:**
  
@@ -137,7 +137,7 @@ Sistema de referencia.
 
 ***Ganador en alguna Diagonal del tablero T***
 
-    check_winnerD(T);
+    CheckWinnerD(T);
 
  **Devuelve:**
  

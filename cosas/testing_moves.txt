@@ -1,0 +1,26 @@
+//Vertical Z
+move(A,3,1);
+move(B,6,1);
+move(C,9,1);
+
+move(A,2,1);
+move(B,5,1);
+move(C,8,1);
+
+
+//Horizontal Z
+move(A,4,1);
+move(B,5,1);
+move(C,6,1);
+
+//Diagonal Z
+	//principal
+move(A,1,1);
+move(B,5,1);
+move(C,9,1);
+
+	//secundaria
+
+move(A,3,1);
+move(B,5,1);
+move(C,7,1);

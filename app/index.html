@@ -8,39 +8,25 @@
                 </style>
     </head>
 <body>
-        <script src="js/lib/three.js"></script>
-        <script src="js/lib/ColladaLoader.js"></script>
-        <script src="js/lib/OrbitControls.js"></script>
-        <script src="js/lib/events.js"></script>
-      
-        <script src="js/settings.js"></script>
-        <script src="js/cubo.js"></script>
-        <script src="js/trans_cubo.js"></script>
-        <script src="js/axismm.js"></script>
-        <!--
-        <script src="js/board.js"></script>
-        <script src="js/mesas.js"></script>
-        -->
+    <!--Libraries-->
+    <script src="js/lib/three.js"></script>
+    <script src="js/lib/ColladaLoader.js"></script>
+    <script src="js/lib/OrbitControls.js"></script>
+    <script src="js/lib/events.js"></script>
+    
+    <!--Graphic-->
+    <script src="js/settings.js"></script>
+    <script src="js/cubo.js"></script>
+    <script src="js/trans_cubo.js"></script>
+    <script src="js/axismm.js"></script>
+    <!--
+    <script src="js/board.js"></script>
+    <script src="js/mesas.js"></script>
+    -->
 
-		<script>
-        
-        //Game Logic
-        var Update = function(){
-
-        };
-
-        //Draw Scene
-        var Render = function(){
-            requestAnimationFrame(Render);
-            renderer.render(scene, camera);
-        };
-        Render();
-
-        //GameLoop
-        var GameLoop = function(){
-
-        };
-
-		</script>
-	</body>
+    <!-- Game Logic-->
+    <script src="js/game/logic.js"></script>
+    <script src="js/game/winner.js"></script>
+    <script src="js/triqui.js"></script>
+</body>
 </html>
