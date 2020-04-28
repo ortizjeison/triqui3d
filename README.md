@@ -11,7 +11,9 @@
 
 # Sistema de referencia:
 > X: Rojo
+
 > Z: Azul
+
 > Y: Verde
 
 # TRIKI 3D
