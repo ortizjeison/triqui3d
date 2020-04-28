@@ -1,7 +1,7 @@
 //Add Board with Collada
 loader = new THREE.ColladaLoader();
 loader.load('https://triqui.cf/app/assets/board.dae', function(collada) {
-  collada_ratio=collada_ratio*10;
+  collada_ratio=collada_ratio*5;
   collada.scene.scale.set(collada_ratio, collada_ratio, collada_ratio);
   scene.add(collada.scene);
   return renderer.render(scene, camera);
