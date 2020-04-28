@@ -1,4 +1,4 @@
-var geometry = new THREE.SphereGeometry(0.4,32,32);
+var geometry = new THREE.SphereGeometry(0.48,32,32);
 var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
 var sphere = new THREE.Mesh( geometry, material );
 sphere.position.x = -1.5;
