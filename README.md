@@ -9,6 +9,11 @@
 # Factor de conversión:
 > en Threejs 1 unidad = 100mm en Sketchup (factor = 0.2538555 )
 
+# Sistema de referencia:
+> X: Rojo
+> Z: Azul
+> Y: Verde
+
 # TRIKI 3D
 Sistema de referencia de las posiciones para todos los tableros:
 
