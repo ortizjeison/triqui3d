@@ -7,6 +7,7 @@ var Update = function(){
 var Render = function(){
     requestAnimationFrame(Render);
     renderer.render(scene, camera);
+    
 };
 Render();
 

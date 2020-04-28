@@ -16,8 +16,8 @@ light.position.set(10,10,10);
 scene.add(light);
 
 //Camera position  (x,z,y)
-camera.position.set(5,3,5);
-camera.lookAt(new THREE.Vector3(0, 0, 0));
+camera.position.set(5,3,2);
+camera.lookAt(new THREE.Vector3(0,0,0));
 //camera.rotation.z = 5 / 6 * Math.PI;
 
 //Axis
