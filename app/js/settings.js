@@ -15,8 +15,8 @@ light = new THREE.DirectionalLight(0xffffff, 1.1);
 light.position.set(10,10,10);
 scene.add(light);
 
-//Set Camera position
-camera.position.set(2,2,2);
+//Camera position  (x,z,y)
+camera.position.set(5,3,5);
 camera.lookAt(new THREE.Vector3(0, 0, 0));
 //camera.rotation.z = 5 / 6 * Math.PI;
 
