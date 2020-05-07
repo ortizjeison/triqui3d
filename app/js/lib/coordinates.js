@@ -62,7 +62,7 @@ function place(geo, Point, Board) {
     }
 
     altura = 0.2;
-    separacion = 2;
+    separacion = 3;
     switch (Board) {
 
         case 'A':
