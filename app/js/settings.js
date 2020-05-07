@@ -1,5 +1,5 @@
-var scene = new THREE.Scene();//se crea la variable escena en el java
-var aspect = window.innerWidth / window.innerHeight;//variable para la relacion entre alto-ancho
+var scene = new THREE.Scene();
+var aspect = window.innerWidth / window.innerHeight;
 var camera = new THREE.PerspectiveCamera( 60, aspect, 0.1, 1000 );//set del tamaño (perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
 var renderer = new THREE.WebGLRenderer();
 var collada_ratio = 0.2538555;
