@@ -1,18 +1,18 @@
-    //Crear Boards
-    var A = new Array(4);
-    A[1] = new Array(4);
-    A[2] = new Array(4);
-    A[3] = new Array(4);
+//Crear Boards
+var A = new Array(4);
+A[1] = new Array(4);
+A[2] = new Array(4);
+A[3] = new Array(4);
 
-    var B= new Array(4);
-    B[1] = new Array(4);
-    B[2] = new Array(4);
-    B[3] = new Array(4);
+var B= new Array(4);
+B[1] = new Array(4);
+B[2] = new Array(4);
+B[3] = new Array(4);
 
-    var C = new Array(4);
-    C[1] = new Array(4);
-    C[2] = new Array(4);
-    C[3] = new Array(4);
+var C = new Array(4);
+C[1] = new Array(4);
+C[2] = new Array(4);
+C[3] = new Array(4);
     
 function start() {
 
