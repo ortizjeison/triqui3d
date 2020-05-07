@@ -1,6 +1,6 @@
 var scene = new THREE.Scene();
 var aspect = window.innerWidth / window.innerHeight;
-var camera = new THREE.PerspectiveCamera( 60, aspect, 0.1, 1000 );//set del tamaño (perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
+var camera = new THREE.PerspectiveCamera(60, aspect, 0.1, 1000);//set del tamaño (perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
 var renderer = new THREE.WebGLRenderer();
 var collada_ratio = 0.2538555;
 renderer.setClearColor( 0xffffff );
@@ -22,7 +22,7 @@ camera.lookAt(new THREE.Vector3(0,0,0));
 
 //Axis
 var axesHelper = new THREE.AxesHelper(1);
-scene.add( axesHelper );
+scene.add(axesHelper);
 
 //Responsive Function
 window.addEventListener('resize', function() {
