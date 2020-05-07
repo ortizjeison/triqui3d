@@ -78,7 +78,7 @@ function place(geo, Point, Board) {
             console.log("Board C");
             break;
         default:
-            console.log("no entró")
+            console.log("Revise el board please");
             break;
     }
 }
