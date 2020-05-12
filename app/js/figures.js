@@ -16,73 +16,102 @@ var m_select2 = new THREE.MeshPhongMaterial({color: select2_color,opacity: 0.9,t
 
 
 //Tablero A
-var ca1 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var ca2 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var ca3 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var ca4 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var ca5 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var ca6 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var ca7 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var ca8 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var ca9 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var a1 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var a2 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var a3 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var a4 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var a5 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var a6 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var a7 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var a8 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var a9 = new THREE.Mesh( geo_cilindro, m_cilindro );
             
-place(ca1,1,'A');place(ca2,2,'A');place(ca3,3,'A');
-place(ca4,4,'A');place(ca5,5,'A');place(ca6,6,'A');
-place(ca7,7,'A');place(ca8,8,'A');place(ca9,9,'A');
+place(a1,1,'A');place(a2,2,'A');place(a3,3,'A');
+place(a4,4,'A');place(a5,5,'A');place(a6,6,'A');
+place(a7,7,'A');place(a8,8,'A');place(a9,9,'A');
 
-scene.add(ca1);scene.add(ca2);scene.add(ca3);
-scene.add(ca4);scene.add(ca5);scene.add(ca6);
-scene.add(ca7);scene.add(ca8);scene.add(ca9);
+scene.add(a1);scene.add(a2);scene.add(a3);
+scene.add(a4);scene.add(a5);scene.add(a6);
+scene.add(a7);scene.add(a8);scene.add(a9);
 
                         //Tablero B
-var cb1 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cb2 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cb3 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cb4 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cb5 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cb6 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cb7 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cb8 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cb9 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var b1 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var b2 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var b3 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var b4 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var b5 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var b6 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var b7 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var b8 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var b9 = new THREE.Mesh( geo_cilindro, m_cilindro );
 
-place(cb1,1,'B');place(cb2,2,'B');place(cb3,3,'B');
-place(cb4,4,'B');place(cb5,5,'B');place(cb6,6,'B');
-place(cb7,7,'B');place(cb8,8,'B');place(cb9,9,'B');
+place(b1,1,'B');place(b2,2,'B');place(b3,3,'B');
+place(b4,4,'B');place(b5,5,'B');place(b6,6,'B');
+place(b7,7,'B');place(b8,8,'B');place(b9,9,'B');
 
-scene.add(cb1);scene.add(cb2);scene.add(cb3);
-scene.add(cb4);scene.add(cb5);scene.add(cb6);
-scene.add(cb7);scene.add(cb8);scene.add(cb9);
+scene.add(b1);scene.add(b2);scene.add(b3);
+scene.add(b4);scene.add(b5);scene.add(b6);
+scene.add(b7);scene.add(b8);scene.add(b9);
 
                         //Tablero C
-var cc1 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cc2 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cc3 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cc4 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cc5 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cc6 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cc7 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cc8 = new THREE.Mesh( geo_cilindro, m_cilindro );
-var cc9 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var c1 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var c2 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var c3 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var c4 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var c5 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var c6 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var c7 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var c8 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var c9 = new THREE.Mesh( geo_cilindro, m_cilindro );
 
-place(cc1,1,'C');place(cc2,2,'C');place(cc3,3,'C');
-place(cc4,4,'C');place(cc5,5,'C');place(cc6,6,'C');
-place(cc7,7,'C');place(cc8,8,'C');place(cc9,9,'C');
+place(c1,1,'C');place(c2,2,'C');place(c3,3,'C');
+place(c4,4,'C');place(c5,5,'C');place(c6,6,'C');
+place(c7,7,'C');place(c8,8,'C');place(c9,9,'C');
 
-scene.add(cc1);scene.add(cc2);scene.add(cc3);
-scene.add(cc4);scene.add(cc5);scene.add(cc6);
-scene.add(cc7);scene.add(cc8);scene.add(cc9);
+scene.add(c1);scene.add(c2);scene.add(c3);
+scene.add(c4);scene.add(c5);scene.add(c6);
+scene.add(c7);scene.add(c8);scene.add(c9);
 
-//Colorear Cilindros seleccionados
-function Select1(Mesh){
-    Mesh.material =  m_select1;
+//Colorear Cilindros selecionados
+function Select(Mesh, player){
+    if(player==1){
+        Mesh.material = m_select1;
+    }
+    if(player==2){
+        Mesh.material = m_select2;
+    }
 }
 
-function Select2(Mesh){
-    Mesh.material =  m_select2;
-}
+function Unselect(){
+    a1.material = m_cilindro;
+    a2.material = m_cilindro;
+    a3.material = m_cilindro;
+    a4.material = m_cilindro;
+    a5.material = m_cilindro;
+    a6.material = m_cilindro;
+    a7.material = m_cilindro;
+    a8.material = m_cilindro;
+    a9.material = m_cilindro;
 
-function Unselect(Mesh){
-    Mesh.material =  m_cilindro;
+    b1.material = m_cilindro;
+    b2.material = m_cilindro;
+    b3.material = m_cilindro;
+    b4.material = m_cilindro;
+    b5.material = m_cilindro;
+    b6.material = m_cilindro;
+    b7.material = m_cilindro;
+    b8.material = m_cilindro;
+    b9.material = m_cilindro;
+
+    c1.material = m_cilindro;
+    c2.material = m_cilindro;
+    c3.material = m_cilindro;
+    c4.material = m_cilindro;
+    c5.material = m_cilindro;
+    c6.material = m_cilindro;
+    c7.material = m_cilindro;
+    c8.material = m_cilindro;
+    c9.material = m_cilindro;
 }
 /*
 var domEvents = new THREEx.DomEvents(camera, renderer.domElement);
