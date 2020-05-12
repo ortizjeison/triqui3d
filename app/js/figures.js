@@ -73,7 +73,7 @@ scene.add(c4);scene.add(c5);scene.add(c6);
 scene.add(c7);scene.add(c8);scene.add(c9);
 
 //Colorear Cilindros selecionados
-function Select(Mesh, player){
+function select(Mesh, player){
     if(player==1){
         Mesh.material = m_select1;
     }
@@ -82,7 +82,7 @@ function Select(Mesh, player){
     }
 }
 
-function Unselect(){
+function unselect(){
     a1.material = m_cilindro;
     a2.material = m_cilindro;
     a3.material = m_cilindro;
@@ -120,4 +120,3 @@ domEvents.addEventListener(cube, 'click', function(event){
     RotarCubo();
 }, false);
 */
-
