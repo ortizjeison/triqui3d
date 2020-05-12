@@ -15,9 +15,3 @@ Render();
 var GameLoop = function(){
 
 };
-
-
-//Probando cómo cambiar el color de un mesh
-cc1.setColor = function(color){
-    cc1.material.color.set(color);
-}

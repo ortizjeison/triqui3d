@@ -6,26 +6,23 @@ place(sphere,4,'A');
 scene.add(sphere);
 
 //Cilindros
-color = 0xFFFFFF;
+color = 'rgb(255,255,255)';
 var geo_cilindro = new THREE.CylinderGeometry(1,1,0.4,32);
-var material_cilindro = new THREE.MeshPhongMaterial({
-    color,
-    opacity: 0.5,
-    transparent: true,
-});
+var m_cilindro = new THREE.MeshPhongMaterial({color,opacity: 0,transparent: true,});
+var m_select1 = new THREE.MeshPhongMaterial({color: 0xfc0303,opacity: 0.9,transparent: true,});
+var m_select2 = new THREE.MeshPhongMaterial({color: 0x03fc56,opacity: 0.9,transparent: true,});
 
-//material_cilindro.color.set('rgb(255, 255, 255)');
 
 //Tablero A
-var ca1 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var ca2 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var ca3 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var ca4 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var ca5 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var ca6 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var ca7 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var ca8 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var ca9 = new THREE.Mesh( geo_cilindro, material_cilindro );
+var ca1 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var ca2 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var ca3 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var ca4 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var ca5 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var ca6 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var ca7 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var ca8 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var ca9 = new THREE.Mesh( geo_cilindro, m_cilindro );
             
 //Fila 1
 place(ca1,1,'A');place(ca2,2,'A');place(ca3,3,'A');
@@ -37,15 +34,15 @@ scene.add(ca4);scene.add(ca5);scene.add(ca6);
 scene.add(ca7);scene.add(ca8);scene.add(ca9);
 
                         //Tablero B
-var cb1 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cb2 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cb3 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cb4 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cb5 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cb6 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cb7 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cb8 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cb9 = new THREE.Mesh( geo_cilindro, material_cilindro );
+var cb1 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cb2 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cb3 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cb4 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cb5 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cb6 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cb7 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cb8 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cb9 = new THREE.Mesh( geo_cilindro, m_cilindro );
 
 //Fila 1
 place(cb1,1,'B');place(cb2,2,'B');place(cb3,3,'B');
@@ -57,15 +54,15 @@ scene.add(cb4);scene.add(cb5);scene.add(cb6);
 scene.add(cb7);scene.add(cb8);scene.add(cb9);
 
                         //Tablero C
-var cc1 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cc2 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cc3 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cc4 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cc5 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cc6 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cc7 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cc8 = new THREE.Mesh( geo_cilindro, material_cilindro );
-var cc9 = new THREE.Mesh( geo_cilindro, material_cilindro );
+var cc1 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cc2 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cc3 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cc4 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cc5 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cc6 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cc7 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cc8 = new THREE.Mesh( geo_cilindro, m_cilindro );
+var cc9 = new THREE.Mesh( geo_cilindro, m_cilindro );
 
 //Fila 1
 place(cc1,1,'C');place(cc2,2,'C');place(cc3,3,'C');
@@ -75,6 +72,25 @@ place(cc7,7,'C');place(cc8,8,'C');place(cc9,9,'C');
 scene.add(cc1);scene.add(cc2);scene.add(cc3);
 scene.add(cc4);scene.add(cc5);scene.add(cc6);
 scene.add(cc7);scene.add(cc8);scene.add(cc9);
+
+
+
+
+//Probando cómo cambiar el color de un mesh
+function Select1(Mesh){
+    Mesh.material =  m_select1;
+}
+function Unselect1(Mesh){
+    Mesh.material =  m_cilindro;
+}
+
+function Select2(Mesh){
+    Mesh.material =  m_select2;
+}
+
+function Unselect2(Mesh){
+    Mesh.material =  m_cilindro;
+}
 
 /*
 var domEvents = new THREEx.DomEvents(camera, renderer.domElement);
