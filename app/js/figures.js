@@ -2,7 +2,7 @@
 var geometry = new THREE.SphereGeometry(0.86,32,32);
 var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
 var sphere = new THREE.Mesh(geometry, material);
-place(sphere,4,'A');
+place(sphere,4,'C');
 scene.add(sphere);
 
 //Cilindros
