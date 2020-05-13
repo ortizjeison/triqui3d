@@ -48,24 +48,25 @@ function place_cilindro(geo, Point, Board) {
     switch (Board) {
         case 'A':
             geo.position.y=altura;
-            //console.log("Board A");
+            console.log("Board A");
             break;
         case 'B':
             geo.position.y=altura+2*separacion;
-            //console.log("Board B");
+            console.log("Board B");
             break;
         case 'C':
             geo.position.y=altura+4*separacion;
-            //console.log("Board C");
+            console.log("Board C");
             break;
         default:
-            //console.log("Revise el board please");
+            console.log("Revise el board please");
             break;
     }
 }
 
 //Place Fichas
 function place_ficha(geo, Point, Board) {
+    scene.add(geo);
     ans = -1;
     switch (Point) {
         case 1:

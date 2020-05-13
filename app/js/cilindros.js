@@ -1,7 +1,7 @@
 //Cilindros
 color_default = 0xffffff;
-select1_color = 0xfc0303;
-select2_color = 0x03fc56;
+select1_color = 0x03dffc;
+select2_color = 0x3ae851;
 var geo_cilindro = new THREE.CylinderGeometry(1,1,0.4,32);
 var m_cilindro = new THREE.MeshPhongMaterial({color: color_default,opacity: 0,transparent: true,});
 var m_select1 = new THREE.MeshPhongMaterial({color: select1_color,opacity: 0.9,transparent: true,});
