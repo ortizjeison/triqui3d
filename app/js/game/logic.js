@@ -42,7 +42,21 @@ function clear_board(M){
 // (3) | 7 | 8 | 9* |
 //     +---+---+---+
 
-function check(M, pos) {
+function check(Board, pos) {
+    switch (Board) {
+        case 'A':
+            M=A;
+            break;
+        case 'B':
+            M=B;
+            break;            
+        case 'C':
+            M=C;
+            break;
+        default:
+            break;
+    }
+
     ans = -1;
     switch (pos) {
         case 1:
@@ -89,7 +103,23 @@ function check(M, pos) {
 }
 
 //Set Jugada, recibe M, pos, y el jugador
-function move(M, pos, player) {
+function move(Board, pos, player) {
+
+    switch (Board) {
+        case 'A':
+            M=A;
+            break;
+        case 'B':
+            M=B;
+            break;            
+        case 'C':
+            M=C;
+            break;
+        default:
+            break;
+    }
+
+
     if (check(M,pos)==0) {
         switch (pos) {
             case 1:
