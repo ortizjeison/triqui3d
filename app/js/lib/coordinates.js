@@ -138,9 +138,8 @@ function place_ficha(geo, Point, Board) {
 }
 
 function move_ficha(geo, dest) {
-    console.log(geo.position.y);
-    console.log(dest);
-
+    //console.log(geo.position.y);
+    //console.log(dest);
     size=0;
     geo.scale.set(size,size,size);
     delta=0.1;
@@ -157,5 +156,14 @@ function move_ficha(geo, dest) {
         }
     }
     loop();
-    
 };
+
+function rotate_figura(g1,g2,g3){
+    function loop(){
+        g1.rotation.y +=0.1;
+        g2.rotation.y +=0.1;
+        g3.rotation.y +=0.1;
+        requestAnimationFrame(loop);
+    }
+    loop();
+}
