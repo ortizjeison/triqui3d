@@ -1,5 +1,5 @@
-var geometry = new THREE.SphereGeometry(0.86,32,32);
-var material = new THREE.MeshBasicMaterial( {color: 0xffff00} );
+var geometry = new THREE.IcosahedronBufferGeometry(0.86,0);
+var material = new THREE.MeshPhongMaterial( {color: 0x03dffc} );
 var s1 = new THREE.Mesh(geometry, material);
 var s2 = new THREE.Mesh(geometry, material);
 
