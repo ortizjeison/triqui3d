@@ -42,6 +42,19 @@ function clear_board(M){
 // (3) | 7 | 8 | 9* |
 //     +---+---+---+
 
+//Recibe un id de ficha
+//retorna el jugador al que pertenece.
+function id2p(fichaid){
+    if(fichaid>=first1 && fichaid<=last1){
+        return 1;
+    }else if(fichaid>=first2 && fichaid<=last2){
+        return 2;
+    }else{
+        console.log("id fuera de los rangos");
+        return -1;
+    }
+}
+
 function check(Board, pos) {
     switch (Board) {
         case 'A':
@@ -103,7 +116,7 @@ function check(Board, pos) {
 }
 
 //Set Jugada, recibe M, pos, y el jugador
-function move(Board, pos, player) {
+function move(Board, pos, ficha_id) {
 
     switch (Board) {
         case 'A':
@@ -123,39 +136,39 @@ function move(Board, pos, player) {
     if (check(M,pos)==0) {
         switch (pos) {
             case 1:
-                M[1][1] = player;
+                M[1][1] = ficha_id;
                 ans=true;   
                 break;
             case 2:
-                M[1][2] = player;
+                M[1][2] = ficha_id;
                 ans=true;   
                 break;
             case 3:
-                M[1][3] = player;
+                M[1][3] = ficha_id;
                 ans=true;   
                 break;
             case 4:
-                M[2][1] = player;
+                M[2][1] = ficha_id;
                 ans=true;   
                 break;
             case 5:
-                M[2][2] = player;
+                M[2][2] = ficha_id;
                 ans=true;   
                 break;
             case 6:
-                M[2][3] = player;
+                M[2][3] = ficha_id;
                 ans=true;   
                 break;    
             case 7:
-                M[3][1] = player;
+                M[3][1] = ficha_id;
                 ans=true;   
                 break;
             case 8:
-                M[3][2] = player;
+                M[3][2] = ficha_id;
                 ans=true;   
                 break;
             case 9:
-                M[3][3] = player;
+                M[3][3] = ficha_id;
                 ans=true;   
                 break;         
             default:

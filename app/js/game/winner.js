@@ -9,17 +9,17 @@
 //CheckWinnerDZ : Si hay ganador en alguna diagonal del eje Z (No recibe parámetros)
 
 function CheckWinnerH(M) {
-    if(check(M,1)==check(M,2) && check(M,2)==check(M,3) && check(M,1)!=0){
-        console.log("Ganó "+ check(M,1)+" en (1)");
-        return check(M,1);
+    if(id2p(check(M,1))==id2p(check(M,2)) && id2p(check(M,2))==id2p(check(M,3)) && id2p(check(M,1))!=0){
+        console.log("Ganó "+ id2p(check(M,1))+" en (1)");
+        return id2p(check(M,1));
     }
     if(check(M,4)==check(M,5) && check(M,5)==check(M,6) && check(M,4)!=0){
         console.log("Ganó "+ check(M,4)+" en (2)");
-        return check(M,4);
+        return id2p(check(M,4));
     }
     if(check(M,7)==check(M,8) && check(M,8)==check(M,9) && check(M,7)!=0){
         console.log("Ganó "+ check(M,7)+" en (3)");
-        return check(M,7);
+        return id2p(check(M,7));
     }
     return -1;
 }
