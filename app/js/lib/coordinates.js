@@ -143,13 +143,21 @@ function move_ficha(geo, dest) {
     console.log(geo.position.y);
     console.log(dest);
 
+    size=0;
+    geo.scale.set(size,size,size);
+    delta=0.1;
+
     function loop(){
         if(geo.position.y>=dest){
-            geo.position.y-=0.05;
+            geo.position.y-=delta;
+            size+=delta/4;
+            geo.scale.set(size,size,size);
+            
             console.log(geo.position.y);
             console.log(dest);
-            requestAnimationFrame(loop);        
+            requestAnimationFrame(loop);    
         }
     }
     loop();
+    
 };
