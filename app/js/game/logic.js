@@ -56,6 +56,73 @@ function id2p(fichaid){
     }
 }
 
+//Recibe id y devuelve el respectivo mesh
+function getmesh(f) {
+    switch (f) {
+        case 43:
+            return fa1;
+            break;
+        case 44:
+            return fa2;
+            break;
+        case 45:
+            return fa3;
+            break;
+        case 46:
+            return fa4;
+            break;
+        case 47:
+            return fa5;
+            break;
+        case 48:
+            return fa6;
+            break;
+        case 49:
+            return fa7;
+            break;
+        case 50:
+            return fa8;
+            break;
+        case 51:
+            return fa9;
+            break;
+        //Player 2
+        case 52:
+            return fb1;
+            break;
+        case 53:
+            return fb2;
+            break;
+        case 54:
+            return fb3;
+            break;
+        case 55:
+            return fb4;
+            break;
+        case 56:
+            return fb5;
+            break;
+        case 57:
+            return fb6;
+            break;
+        case 58:
+            return fb7;
+            break;
+        case 59:
+            return fb8;
+            break;
+        case 60:
+            return fb9;
+            break;
+        default:
+            break;
+    }
+}
+
+function rotate(f1,f2,f3){
+    rotate_figura(getmesh(f1),getmesh(f2),getmesh(f3));
+}
+
 function check(Board, pos) {
     switch (Board) {
         case 'A':
