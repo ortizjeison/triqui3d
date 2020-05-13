@@ -13,7 +13,8 @@ var C = new Array(4);
 C[1] = new Array(4);
 C[2] = new Array(4);
 C[3] = new Array(4);
-    
+
+start();
 function start() {
 
     //Limpiar boards
