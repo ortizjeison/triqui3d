@@ -158,6 +158,7 @@ function move_ficha(geo, dest) {
     loop();
 };
 
+//Función de rotar 3 mesh.
 function rotate_figura(g1,g2,g3){
     function loop(){
         g1.rotation.y +=0.1;

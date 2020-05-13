@@ -119,6 +119,7 @@ function getmesh(f) {
     }
 }
 
+//Recibe 3 ids de ficha y las pone a rotar.
 function rotate(f1,f2,f3){
     rotate_figura(getmesh(f1),getmesh(f2),getmesh(f3));
 }
