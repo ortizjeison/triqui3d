@@ -59,7 +59,7 @@ function place_cilindro(geo, Point, Board) {
             //console.log("Board C");
             break;
         default:
-            //console.log("Revise el board please");
+            console.log("Revise el board please");
             break;
     }
 }
