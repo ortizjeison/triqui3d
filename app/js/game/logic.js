@@ -46,13 +46,18 @@ function clear_board(M){
 //Recibe un id de ficha
 //retorna el jugador al que pertenece.
 function id2p(fichaid){
-    if(fichaid>=first1 && fichaid<=last1){
-        return 1;
-    }else if(fichaid>=first2 && fichaid<=last2){
-        return 2;
+
+    if(fichaid!=0){
+        if(fichaid>=first1 && fichaid<=last1){
+            return 1;
+        }else if(fichaid>=first2 && fichaid<=last2){
+            return 2;
+        }else{
+            console.log("id "+ fichaid +" fuera de los rangos");
+            return 0;
+        }
     }else{
-        console.log("id fuera de los rangos");
-        return -1;
+        return 0;
     }
 }
 
@@ -120,8 +125,8 @@ function getmeshF(f) {
 }
 
 //Recibe id y devuelve el respectivo mesh (cilindro)
-function getmeshC(f) {
-    switch (f) {
+function getmeshC(id) {
+    switch (id) {
         case 16:
             return a1;
             break;
@@ -208,7 +213,32 @@ function getmeshC(f) {
     }
 }
 
-//Recibe id cilindro y ejecuta move
+//Recibe id cilindro y devuelve char (A,B,C) con el tablero
+function cil2board(id) {
+    if(id>=16&&id<=24){
+        return 'A';
+    }else if(id>=25&&id<=33){
+        return 'B';
+    }else if(id>=34&&id<=42){
+        return 'C';
+    }else{
+        console.log("id fuera del intervalo");
+        return null;
+    }
+}
+
+function cil2position(id) {
+    if(cil2board(id)=='A'){
+        return id-15;
+    }else if(cil2board(id)=='B'){
+        return id-24
+    }else if(cil2board(id)=='C'){
+        return id-33;
+    }else{
+        console.log("cilindro error");
+        return null;
+    }
+}
 
 //Recibe 3 ids de ficha y las pone a rotar.
 function rotate(f1,f2,f3){
@@ -230,7 +260,7 @@ function check(Board, pos) {
             break;
     }
 
-    ans = -1;
+    ans = null;
     switch (pos) {
         case 1:
             ans = M[1][1];

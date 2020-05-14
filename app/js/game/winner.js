@@ -8,33 +8,64 @@
 //CheckWinnerVZ : Si hay ganador en alguna vertical del eje Z (No recibe parámetros)
 //CheckWinnerDZ : Si hay ganador en alguna diagonal del eje Z (No recibe parámetros)
 
+function winner() {
+    ans = false;
+    if(CheckWinnerH('A')!=-1 || CheckWinnerH('B')!=-1 || CheckWinnerH('C')!=-1){
+        alert("ganó alguien H");        
+    }
+    if(CheckWinnerV('A')!=-1 || CheckWinnerV('B')!=-1 || CheckWinnerV('C')!=-1){
+        alert("ganó alguien V");        
+    }
+    if(CheckWinnerD('A')!=-1 || CheckWinnerD('B')!=-1 || CheckWinnerD('C')!=-1){
+        alert("ganó alguien D");        
+    }
+    if (CheckWinnerZ()!=-1) {
+        alert("Ganó el jugador "+ CheckWinnerZ()+ " (Z)");
+    }
+
+
+    return ans;
+}
+
 function CheckWinnerH(M) {
     if(id2p(check(M,1))==id2p(check(M,2)) && id2p(check(M,2))==id2p(check(M,3)) && id2p(check(M,1))!=0){
-        console.log("Ganó "+ id2p(check(M,1))+" en (1)");
+        
+        console.log("Ganó "+ id2p(check(M,1))+" en (1)");        
+        rotate(check(M,1),check(M,2),check(M,3));
         return id2p(check(M,1));
     }
     if(id2p(check(M,4))==id2p(check(M,5)) && id2p(check(M,5))==id2p(check(M,6)) && id2p(check(M,4))!=0){
+        
         console.log("Ganó "+ id2p(check(M,4))+" en (2)");
-        return id2p(id2p(check(M,4)));
+        rotate(check(M,4),check(M,5),check(M,6));
+        return id2p(check(M,4));
     }
     if(id2p(check(M,7))==id2p(check(M,8)) && id2p(check(M,8))==id2p(check(M,9)) && id2p(check(M,7))!=0){
+        
         console.log("Ganó "+ id2p(check(M,7))+" en (3)");
-        return id2p(id2p(check(M,7)));
+        rotate(check(M,7),check(M,8),check(M,9));
+        return id2p(check(M,7));
     }
     return -1;
 }
 
 function CheckWinnerV(M) {
     if(id2p(check(M,1))==id2p(check(M,4)) && id2p(check(M,4))==id2p(check(M,7)) && id2p(check(M,7))!=0){
+        
         console.log("Ganó "+ id2p(check(M,1))+" en (1)");
+        rotate(check(M,1),check(M,4),check(M,7));
         return id2p(check(M,1));
     }
     if(id2p(check(M,2))==id2p(check(M,5)) && id2p(check(M,5))==id2p(check(M,8)) && id2p(check(M,8))!=0){
+        
         console.log("Ganó "+ id2p(check(M,2))+" en (2)");
+        rotate(check(M,2),check(M,5),check(M,8));
         return id2p(check(M,2));
     }
     if(id2p(check(M,3))==id2p(check(M,6)) && id2p(check(M,6))==id2p(check(M,9)) && id2p(check(M,9))!=0){
+        
         console.log("Ganó "+ id2p(check(M,3))+" en (3)");
+        rotate(check(M,3),check(M,6),check(M,9));
         return id2p(check(M,3));
     }
     return -1;
@@ -43,11 +74,15 @@ function CheckWinnerV(M) {
 function CheckWinnerD(M) {
 
     if(id2p(check(M,1))==id2p(check(M,5)) && id2p(check(M,5))==id2p(check(M,9)) && id2p(check(M,1))!=0){
-        console.log(id2p(check(M,1))+" Diagonal Principal");
+        
+        console.log("Ganó "+id2p(check(M,1))+" Diagonal Principal");
+        rotate(check(M,1),check(M,5),check(M,9));
         return id2p(check(M,1));
     }
     if(id2p(check(M,3))==id2p(check(M,5)) && id2p(check(M,5))==id2p(check(M,7)) && id2p(check(M,3))!=0){
+        
         console.log("Ganó "+id2p(check(M,3))+" Diagonal Secundaria");
+        rotate(check(M,3),check(M,5),check(M,7));
         return id2p(check(M,3));
     }
     return -1;
@@ -60,14 +95,13 @@ function CheckWinnerZ() {
     for(i=1;i<10;i++){
         if(id2p(check('A',i))==id2p(check('B',i)) && id2p(check('B',i))==id2p(check('C',i)) && id2p(check('A',i))!=0){
             console.log("Ganó "+ id2p(check('A',i)) +" en el eje Z ("+i+")");
-            return id2p(check('A',i));
+            rotate(check('A',i),check('B',i),check('C',i));
+            ans = id2p(check('A',i));
+            return ans; 
+        }else{
+            ans=-1;
         }
     }
-    if(ans==0){
-        ans=-1;
-        console.log("Meeeen, no ha ganado nadieee");
-    }
-
     return ans;
 }
 
