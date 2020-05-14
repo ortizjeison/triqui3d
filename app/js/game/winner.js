@@ -192,6 +192,8 @@ function CheckWinnerVZ() {
 
 function CheckWinnerHZ() {
     ans = -1;
+
+    //Fila 1
     if(id2p(check('A',1))==id2p(check('B',2)) && id2p(check('B',2))==id2p(check('C',3)) && id2p(check('A',1))!=0){
         
         rotate(check('A',1),check('B',2),check('C',3));
@@ -201,6 +203,16 @@ function CheckWinnerHZ() {
     }else{
         ans=-1;
     }
+    if(id2p(check('A',3))==id2p(check('B',2)) && id2p(check('B',2))==id2p(check('C',1)) && id2p(check('A',3))!=0){
+        
+        rotate(check('A',3),check('B',2),check('C',1));
+        console.log("Ganó "+ id2p(check('A',3))+" en (1)");
+        ans = id2p(check('A',3));
+        return ans;
+    }else{
+        ans=-1;
+    }
+//Fila 2
     if(id2p(check('A',4))==id2p(check('B',5)) && id2p(check('B',5))==id2p(check('C',6)) && id2p(check('A',4))!=0){
         
         rotate(check('A',4),check('B',5),check('C',6));
@@ -210,11 +222,30 @@ function CheckWinnerHZ() {
     }else{
         ans=-1;
     }
+    if(id2p(check('A',6))==id2p(check('B',5)) && id2p(check('B',5))==id2p(check('C',4)) && id2p(check('A',6))!=0){
+        
+        rotate(check('A',6),check('B',5),check('C',4));
+        console.log("Ganó "+ id2p(check('A',6))+" en (2)");
+        ans = id2p(check('A',6));
+        return ans;
+    }else{
+        ans=-1;
+    }
+//Fila 3
     if(id2p(check('A',7))==id2p(check('B',8)) && id2p(check('B',8))==id2p(check('C',9)) && id2p(check('A',7))!=0){
         
         rotate(check('A',7),check('B',8),check('C',9));
         console.log("Ganó "+ id2p(check('A',7))+" en (3)");
         ans = id2p(check('A',7));
+        return ans;
+    }else{
+        ans=-1;
+    }
+    if(id2p(check('A',9))==id2p(check('B',8)) && id2p(check('B',8))==id2p(check('C',7)) && id2p(check('A',9))!=0){
+        
+        rotate(check('A',9),check('B',8),check('C',7));
+        console.log("Ganó "+ id2p(check('A',9))+" en (3)");
+        ans = id2p(check('A',9));
         return ans;
     }else{
         ans=-1;
