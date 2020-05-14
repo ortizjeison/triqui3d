@@ -47,7 +47,7 @@ function raycast(e){
 
   if(intersects.length>0){
   for ( var i = 0; i < intersects.length; i++) {
-    console.log(intersects[i]);
+    console.log(intersects[i].object.id);
   } 
 }else
 console.log("Error, no seleccionaste ninguna figura"); 
