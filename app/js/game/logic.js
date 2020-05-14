@@ -369,7 +369,7 @@ function move(Board, pos, ficha_id) {
         console.log("La casilla está llena beibi");
         return ans;
     }
-    print_board(M);
+    print_boards();
 }
 
 //Imprimir Tablero M en consola.
@@ -380,16 +380,10 @@ function print_board(M) {
 }
 
 function print_boards() {
-    console.log("A:");
-    console.log("| "+check(A, 1)+" | "+check(A, 2)+" | "+check(A, 3)+" |");
-    console.log("| "+check(A, 4)+" | "+check(A, 5)+" | "+check(A, 6)+" |");
-    console.log("| "+check(A, 7)+" | "+check(A, 8)+" | "+check(A, 9)+" |");
-    console.log("B:");
-    console.log("| "+check(B, 1)+" | "+check(B, 2)+" | "+check(B, 3)+" |");
-    console.log("| "+check(B, 4)+" | "+check(B, 5)+" | "+check(B, 6)+" |");
-    console.log("| "+check(B, 7)+" | "+check(B, 8)+" | "+check(B, 9)+" |");
     console.log("C:");
-    console.log("| "+check(C, 1)+" | "+check(C, 2)+" | "+check(C, 3)+" |");
-    console.log("| "+check(C, 4)+" | "+check(C, 5)+" | "+check(C, 6)+" |");
-    console.log("| "+check(C, 7)+" | "+check(C, 8)+" | "+check(C, 9)+" |");
+    print_board('C');
+    console.log("B:");
+    print_board('B');
+    console.log("A:");
+    print_board('A');
 }
