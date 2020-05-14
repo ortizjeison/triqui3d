@@ -3,6 +3,9 @@ var active1=1;
 var active2=1;
 var holding = 0;
 
+if (typeof window.orientation !== 'undefined'){ 
+    alert('holi'); 
+}
 
       //click en casilla Vacía:
           //si tiene fichas disponibles->poner una
