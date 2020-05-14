@@ -36,7 +36,7 @@ window.addEventListener('resize', function() {
 
 //Raycast click
 raycaster = new THREE.Raycaster();
-renderer.domElement.addEventListener('click', raycast, false); 
+renderer.domElement.addEventListener('dblclick', raycast, false); 
 
 function raycast(e){
   mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
