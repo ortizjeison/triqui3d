@@ -1,6 +1,6 @@
 var scene = new THREE.Scene();
 var aspect = window.innerWidth / window.innerHeight;
-var camera = new THREE.PerspectiveCamera(60, aspect, 0.1, 1000);//set del tamaño (perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
+var camera = new THREE.PerspectiveCamera(40, aspect, 1, 500);//(perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
 var raycaster, mouse = { x : 0, y : 0 };
 var renderer = new THREE.WebGLRenderer();
 var collada_ratio = 0.2538555;
@@ -13,8 +13,6 @@ if (typeof window.orientation !== 'undefined'){
   mobile = true;
 }
 
-//Orbit Controls
-controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 //Light
 light = new THREE.DirectionalLight(0xffffff, 1.1);
@@ -22,9 +20,12 @@ light.position.set(10,20,10);
 scene.add(light);
 
 //Camera position  (x,z,y)
-camera.position.set(10,20,10);
-camera.lookAt(new THREE.Vector3(0,0,0));
+camera.position.set(10,30,10);
+camera.lookAt(new THREE.Vector3(10,10,10));
 //camera.rotation.z = 5 / 6 * Math.PI;
+
+//Orbit Controls
+controls = new THREE.OrbitControls(camera, renderer.domElement);
 
 //Axis
 var axesHelper = new THREE.AxesHelper(1);
@@ -59,6 +60,8 @@ function raycast(e){
     if(intersects[0].object.geometry.type=="CylinderGeometry") {
       
       var cilindro = intersects[0].object.id;
+
+      //Hacer un fake que pase cilindro id dependiendo de la ficha que se tocó
       play(cilindro);
     }else{
         //console.log("Pos no porque no es un cilindro");   
