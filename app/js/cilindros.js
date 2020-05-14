@@ -105,10 +105,3 @@ function unselect(){
     c8.material = m_cilindro;
     c9.material = m_cilindro;
 }
-/*
-var domEvents = new THREEx.DomEvents(camera, renderer.domElement);
-domEvents.addEventListener(cube, 'click', function(event){
-    console.log('click');
-    RotarCubo();
-}, false);
-*/

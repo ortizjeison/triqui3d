@@ -1,6 +1,7 @@
 var scene = new THREE.Scene();
 var aspect = window.innerWidth / window.innerHeight;
 var camera = new THREE.PerspectiveCamera(60, aspect, 0.1, 1000);//set del tamaño (perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
+var raycaster, mouse = { x : 0, y : 0 };
 var renderer = new THREE.WebGLRenderer();
 var collada_ratio = 0.2538555;
 renderer.setClearColor( 0xffffff );
@@ -32,6 +33,26 @@ window.addEventListener('resize', function() {
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
 });
+
+//Raycaster
+raycaster = new THREE.Raycaster();
+renderer.domElement.addEventListener('click', raycast, false); 
+
+function raycast(e){
+  mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
+  mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+
+  raycaster.setFromCamera( mouse, camera );
+  var intersects = raycaster.intersectObjects(scene.children,true);
+
+  if(intersects.length>0){
+  for ( var i = 0; i < intersects.length; i++) {
+    console.log(intersects[i]);
+  } 
+}else
+console.log("Error, no seleccionaste ninguna figura"); 
+}
+
 
 function ChangeCoursor(player){
     if (player==1) {
