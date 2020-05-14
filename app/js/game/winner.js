@@ -258,11 +258,31 @@ function CheckWinnerDZ() {
     }else{
         ans=-1;
     }
+
+    if(id2p(check('A',9))==id2p(check('B',5)) && id2p(check('B',5))==id2p(check('C',1)) && id2p(check('A',9))!=0){
+        
+        rotate(check('A',9),check('B',5),check('C',1));
+        console.log("Ganó "+id2p(check('A',9))+" Diagonal Principal");
+        ans = id2p(check('A',9));
+        return ans;
+    }else{
+        ans=-1;
+    }
+
     if(id2p(check('A',3))==id2p(check('B',5)) && id2p(check('B',5))==id2p(check('C',7)) && id2p(check('A',3))!=0){
         
         rotate(check('A',3),check('B',5),check('C',7));
         console.log("Ganó "+id2p(check('A',3))+" Diagonal Secundaria");
         ans = id2p(check('A',3));
+        return ans;
+    }else{
+        ans=-1;
+    }
+    if(id2p(check('A',7))==id2p(check('B',5)) && id2p(check('B',5))==id2p(check('C',3)) && id2p(check('A',7))!=0){
+        
+        rotate(check('A',7),check('B',5),check('C',3));
+        console.log("Ganó "+id2p(check('A',7))+" Diagonal Secundaria");
+        ans = id2p(check('A',7));
         return ans;
     }else{
         ans=-1;
