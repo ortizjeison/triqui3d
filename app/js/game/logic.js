@@ -374,9 +374,9 @@ function move(Board, pos, ficha_id) {
 
 //Imprimir Tablero M en consola.
 function print_board(M) {
-    console.log("| "+check(M, 1)+" | "+check(M, 2)+" | "+check(M, 3)+" |");
-    console.log("| "+check(M, 4)+" | "+check(M, 5)+" | "+check(M, 6)+" |");
-    console.log("| "+check(M, 7)+" | "+check(M, 8)+" | "+check(M, 9)+" |");
+    console.log("| "+id2p(check(M, 1))+" | "+id2p(check(M, 2))+" | "+id2p(check(M, 3))+" |");
+    console.log("| "+id2p(check(M, 4))+" | "+id2p(check(M, 5))+" | "+id2p(check(M, 6))+" |");
+    console.log("| "+id2p(check(M, 7))+" | "+id2p(check(M, 8))+" | "+id2p(check(M, 9))+" |");
 }
 
 function print_boards() {
