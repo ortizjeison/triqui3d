@@ -86,13 +86,8 @@ function raycasthover(e){
         var objectid = intersects[0].object.id;
         unselect();
         select(getmeshC(objectid),current_player);
-
-    } else
-        console.log("Pos no porque no es un cilindro");
-        
-    }else
-        console.log("Meeen, no has seleccionado nadaaa");
-        //unselect();
+    }
+  }
 }
 
 function nextplayer() {
@@ -101,15 +96,4 @@ function nextplayer() {
   }else{
     current_player=1;
   }
-}
-
-function ChangeCoursor(player){
-    if (player==1) {
-        document.body.style.cursor = "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/meh.png), auto;";
-        console.log("entramos 1");
-    }
-    if(player==2){
-        document.body.style.cursor = "url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/sad.png), auto;";
-        console.log("entramos 2");
-    }
 }
