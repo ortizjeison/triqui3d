@@ -8,6 +8,11 @@ renderer.setClearColor( 0xffffff );
 renderer.setSize( window.innerWidth, window.innerHeight );//establecer el tamaño en el que queremos que muestre nuestra aplicación
 document.body.appendChild(renderer.domElement);
 
+mobile = false;
+if (typeof window.orientation !== 'undefined'){
+  mobile = true;
+}
+
 //Orbit Controls
 controls = new THREE.OrbitControls(camera, renderer.domElement);
 
@@ -40,8 +45,13 @@ renderer.domElement.addEventListener('dblclick', raycast, false);
 
 function raycast(e){
 
-  mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
-  mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+  if(mobile){
+    mouse.x = +(e.targetTouches[0].pageX / window.innerWidth) * 2 +-1;
+    mouse.y = -(e.targetTouches[0].pageY / window.innerHeight) * 2 + 1;
+  }else{
+    mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
+    mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+  }
   raycaster.setFromCamera( mouse, camera );
   var intersects = raycaster.intersectObjects(scene.children, true);
 
@@ -61,8 +71,15 @@ function raycast(e){
 //Raycast hover
 renderer.domElement.addEventListener('mousemove',raycasthover,false);
 function raycasthover(e){
-  mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
-  mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+
+  if(mobile){
+    mouse.x = +(e.targetTouches[0].pageX / window.innerWidth) * 2 +-1;
+    mouse.y = -(e.targetTouches[0].pageY / window.innerHeight) * 2 + 1;
+  }else{
+    mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
+    mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+  }
+
   raycaster.setFromCamera( mouse, camera );
   var intersects = raycaster.intersectObjects(scene.children, true);
 
