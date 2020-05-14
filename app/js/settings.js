@@ -41,16 +41,16 @@ renderer.domElement.addEventListener('click', raycast, false);
 function raycast(e){
   mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
   mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
-
   raycaster.setFromCamera( mouse, camera );
-  var intersects = raycaster.intersectObjects(scene.children,true);
+  var intersects = raycaster.intersectObjects(scene.children, true);
 
   if(intersects.length>0){
-  for ( var i = 0; i < intersects.length; i++) {
-    console.log(intersects[i].object.id);
-  } 
-}else
-console.log("Error, no seleccionaste ninguna figura"); 
+    if(intersects[0].object.geometry.type=="CylinderGeometry") {
+        console.log(intersects[0].object.id);
+    } else
+        console.log("Pos no porque no es un cilindro");   
+    }else
+        console.log("Meeen, no has seleccionado nadaaa");
 }
 
 
