@@ -117,15 +117,10 @@ function CheckWinnerZ() {
 
 function CheckWinnerVZ() {
     ans = -1;
-    console.log("entramos 0");
-    console.log(id2p(check('A',1)));
-    console.log(id2p(check('B',4)));
-    console.log(id2p(check('C',7)));
-    
+
 //Columna 1
     if(id2p(check('A',1))==id2p(check('B',4)) && id2p(check('B',4))==id2p(check('C',7)) && id2p(check('A',1))!=0){
-        console.log("entramos 1");
-
+        
         rotate(check('A',1),check('B',4),check('C',7));
         console.log("Ganó "+ id2p(check('A',1))+" en (1)");
         ans = id2p(check('A',1));
@@ -135,8 +130,7 @@ function CheckWinnerVZ() {
     }
 
     if(id2p(check('A',7))==id2p(check('B',4)) && id2p(check('B',4))==id2p(check('C',1)) && id2p(check('A',7))!=0){
-        console.log("entramos 1");
-
+        
         rotate(check('A',7),check('B',4),check('C',1));
         console.log("Ganó "+ id2p(check('A',7))+" en (1)");
         ans = id2p(check('A',7));
@@ -147,7 +141,7 @@ function CheckWinnerVZ() {
 
 //Columna 2
     if(id2p(check('A',2))==id2p(check('B',5)) && id2p(check('B',5))==id2p(check('C',8)) && id2p(check('A',2))!=0){
-        console.log("entramos 2");
+        
         rotate(check('A',2),check('B',5),check('C',8));
         console.log("Ganó "+ id2p(check('A',2))+" en (2)");
         ans = id2p(check('A',2));
@@ -157,7 +151,7 @@ function CheckWinnerVZ() {
     }
 
     if(id2p(check('A',8))==id2p(check('B',5)) && id2p(check('B',5))==id2p(check('C',2)) && id2p(check('A',8))!=0){
-        console.log("entramos 2");
+        
         rotate(check('A',8),check('B',5),check('C',2));
         console.log("Ganó "+ id2p(check('A',8))+" en (2)");
         ans = id2p(check('A',8));
@@ -168,7 +162,7 @@ function CheckWinnerVZ() {
 
 //Columna 3
     if(id2p(check('A',3))==id2p(check('B',6)) && id2p(check('B',6))==id2p(check('C',9)) && id2p(check('A',3))!=0){
-        console.log("entramos 3");
+        
         rotate(check('A',3),check('B',6),check('C',9));
         console.log("Ganó "+ id2p(check('A',3))+" en (3)");
         ans = id2p(check('A',3));
@@ -178,7 +172,7 @@ function CheckWinnerVZ() {
     }
 
     if(id2p(check('A',9))==id2p(check('B',6)) && id2p(check('B',6))==id2p(check('C',3)) && id2p(check('A',9))!=0){
-        console.log("entramos 3");
+        
         rotate(check('A',9),check('B',6),check('C',3));
         console.log("Ganó "+ id2p(check('A',9))+" en (3)");
         ans = id2p(check('A',9));
