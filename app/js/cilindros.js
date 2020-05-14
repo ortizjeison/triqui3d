@@ -75,6 +75,7 @@ function select(Mesh, player){
 }
 
 function unselect(){
+    console.log("1-selección");
     a1.material = m_cilindro;
     a2.material = m_cilindro;
     a3.material = m_cilindro;

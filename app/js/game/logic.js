@@ -56,8 +56,8 @@ function id2p(fichaid){
     }
 }
 
-//Recibe id y devuelve el respectivo mesh
-function getmesh(f) {
+//Recibe id y devuelve el respectivo mesh (ficha)
+function getmeshF(f) {
     switch (f) {
         case 43:
             return fa1;
@@ -119,9 +119,100 @@ function getmesh(f) {
     }
 }
 
+//Recibe id y devuelve el respectivo mesh (cilindro)
+function getmeshC(f) {
+    switch (f) {
+        case 16:
+            return a1;
+            break;
+        case 17:
+            return a2;
+            break;
+        case 18:
+            return a3;
+            break;
+        case 19:
+            return a4;
+            break;
+        case 20:
+            return a5;
+            break;
+        case 21:
+            return a6;
+            break;
+        case 22:
+            return a7;
+            break;
+        case 23:
+            return a8;
+            break;
+        case 24:
+            return a9;
+            break;
+        case 25:
+            return b1;
+            break;
+        case 26:
+            return b2;
+            break;
+        case 27:
+            return b3;
+            break;
+        case 28:
+            return b4;
+            break;
+        case 29:
+            return b5;
+            break;
+        case 30:
+            return b6;
+            break;
+        case 31:
+            return b7;
+            break;
+        case 32:
+            return b8;
+            break;
+        case 33:
+            return b9;
+            break;
+        case 34:
+            return c1;
+            break;
+        case 35:
+            return c2;
+            break;
+        case 36:
+            return c3;
+            break;
+        case 37:
+            return c4;
+            break;
+        case 38:
+            return c5;
+            break;
+        case 39:
+            return c6;
+            break;
+        case 40:
+            return c7;
+            break;
+        case 41:
+            return c8;
+            break;
+        case 42:
+            return c9;
+            break;
+        default:
+            break;
+    }
+}
+
+//Recibe id cilindro y ejecuta move
+
 //Recibe 3 ids de ficha y las pone a rotar.
 function rotate(f1,f2,f3){
-    rotate_figura(getmesh(f1),getmesh(f2),getmesh(f3));
+    rotate_figura(getmeshF(f1),getmeshF(f2),getmeshF(f3));
 }
 
 function check(Board, pos) {
@@ -200,7 +291,6 @@ function move(Board, pos, ficha_id) {
         default:
             break;
     }
-
 
     if (check(M,pos)==0) {
         switch (pos) {
