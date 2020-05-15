@@ -57,15 +57,13 @@ function raycast(e){
   var intersects = raycaster.intersectObjects(scene.children, true);
 
   if(intersects.length>0){
-    if(intersects[0].object.geometry.type=="CylinderGeometry") {
-      
-      var cilindro = intersects[0].object.id;
+    var selected = intersects[0].object;
 
-      //Hacer un fake que pase cilindro id dependiendo de la ficha que se tocó
-      play(cilindro);
-    }else{
-        //console.log("Pos no porque no es un cilindro");   
-    }
+        if(selected.geometry.type=="CylinderGeometry") {                            
+            play(selected.id);              
+        }else if(selected.geometry.type=="IcosahedronBufferGeometry" || selected.geometry.type=="OctahedronBufferGeometry"){
+            var cilindro_ficha = intersects[1].object.id; //el cilindro de la ficha                                
+        }
     }else{
         //console.log("Meeen, no has seleccionado nadaaa");
     }
