@@ -1,6 +1,6 @@
 var playing = 1;
-var active1=1;
-var active2=1;
+var active1=0;
+var active2=0;
 var holding = 0;
 
 
@@ -25,26 +25,30 @@ function play(id) {
 
     //Click en casilla disp. y fichas por jugar
     if(state==0){
-        if (playing==1 && active1<10) {
-            //El j1 tiene fichas por jugar
-            move(s_board,s_position,p1[active1].id);
-            place_ficha(p1[active1],s_position,s_board);
-            active1++;
+       
+        if (playing==1) {
+            
+            if(active1<9){
+                active1++;
+                //El j1 tiene fichas por jugar
+                move(s_board,s_position,p1[active1].id);
+                place_ficha(p1[active1],s_position,s_board);
+                nextplayer();
+                winner();
+            }else{alert("Ya no tienes fichas disponibles, mueve alguna");}
 
-        }
-        if (playing==2 && active2<10) {
+        }else if(active2<9){
+            active2++;
             //El j2 tiene fichas por jugar
             move(s_board,s_position,p2[active2].id);
             place_ficha(p2[active2],s_position,s_board);
-            active2++;
-        }
-        
+            nextplayer();
+            winner();
+        }else{alert("Ya no tienes fichas disponibles, mueve alguna");}
+        console.log(active1);
+        console.log(active2);
     }
-    nextplayer();
 
-
-
-    winner();
 }
 
 

@@ -21,7 +21,7 @@ scene.add(light);
 
 //Camera position  (x,z,y)
 camera.position.set(10,30,10);
-camera.lookAt(new THREE.Vector3(10,10,10));
+camera.lookAt(new THREE.Vector3(100,0,100));
 //camera.rotation.z = 5 / 6 * Math.PI;
 
 //Orbit Controls
