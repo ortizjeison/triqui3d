@@ -14,6 +14,14 @@ if (typeof window.orientation !== 'undefined'){
 }
 
 
+        //var la_propia_texture = new THREE.TextureLoader().load( 'assets/eia_grande.jpg');
+        var mat = new THREE.MeshBasicMaterial( { color: 0x000000});
+        //mat.side = THREE.BackSide;
+        var skyboxGeo = new THREE.SphereGeometry( 10000, 10000, 10000);
+        var skybox = new THREE.Mesh( skyboxGeo, mat );
+        scene.add( skybox );  
+        
+
 //Light
 light = new THREE.DirectionalLight(0xffffff, 1.1);
 light.position.set(10,20,10);
@@ -26,6 +34,7 @@ camera.lookAt(new THREE.Vector3(100,0,100));
 
 //Orbit Controls
 controls = new THREE.OrbitControls(camera, renderer.domElement);
+
 
 //Axis
 var axesHelper = new THREE.AxesHelper(1);
