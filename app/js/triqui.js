@@ -18,8 +18,13 @@ var holding = 0;
 
 function play(id) {
     //Verificar casilla seleccionada:
+    //A,B,C <-id
     s_board = cil2board(id);
+    
+    //1-9 <-id
     s_position = cil2position(id);
+    
+    //0-60 <-      [A,B,C],[1-9]
     state = check(s_board,s_position);
     console.log("State: "+state);
 
@@ -36,7 +41,6 @@ function play(id) {
                 nextplayer();
                 winner();
             }else{alert("Ya no tienes fichas disponibles, mueve alguna");}
-
         }else if(active2<9){
             active2++;
             //El j2 tiene fichas por jugar
@@ -45,6 +49,8 @@ function play(id) {
             nextplayer();
             winner();
         }else{alert("Ya no tienes fichas disponibles, mueve alguna");}
+        
+        //No hay disponibles si active==9
         console.log("P1: "+active1);
         console.log("P2: "+active2);
     }
