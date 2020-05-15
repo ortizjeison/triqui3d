@@ -45,8 +45,8 @@ function play(id) {
             nextplayer();
             winner();
         }else{alert("Ya no tienes fichas disponibles, mueve alguna");}
-        console.log(active1);
-        console.log(active2);
+        console.log("P1: "+active1);
+        console.log("P2: "+active2);
     }
 
 }
