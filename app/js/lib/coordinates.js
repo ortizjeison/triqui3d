@@ -137,15 +137,31 @@ function move_ficha(geo, dest) {
     geo.scale.set(size,size,size);
     delta=0.1;
 
-    function loop(){
+    function loop1(){
         if(geo.position.y>=dest){
             geo.position.y-=delta;
             size+=delta/4;
             geo.scale.set(size,size,size);
-            requestAnimationFrame(loop);    
+            requestAnimationFrame(loop1);    
         }
     }
-    loop();
+
+    function loop2(){
+        if(geo.position.y>=dest){
+            geo.position.y-=delta;
+            size+=delta/4;
+            geo.scale.set(size,size,size);
+            requestAnimationFrame(loop2);    
+        }
+    }
+    
+    if(playing==1){
+        loop1();
+    }else{
+        loop2();
+    }
+
+    loop1();
 };
 
 //Función de rotar 3 mesh.
