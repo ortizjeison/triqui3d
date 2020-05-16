@@ -19,6 +19,11 @@ light = new THREE.DirectionalLight(0xffffff, 1.1);
 light.position.set(-71,168,80);
 scene.add(light);
 
+//Otra luz de reflejo desde abajo
+light2 = new THREE.DirectionalLight(0xffffff, 0.5);
+light2.position.set(0,-20,0);
+scene.add(light2);
+
 //Camera position  (x,z,y)
 camera.position.set(-20,40,20);
 camera.lookAt(new THREE.Vector3(100,50,100));
