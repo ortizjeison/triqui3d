@@ -32,23 +32,12 @@ window.addEventListener('resize', function() {
     camera.updateProjectionMatrix();
 });
 
-renderer.domElement.addEventListener("touchstart", tapHandler);
+renderer.domElement.addEventListener("touchstart", raycast);
 
 //Raycast click
 raycaster = new THREE.Raycaster();
 renderer.domElement.addEventListener('dblclick', raycast, false); 
-
-function tapHandler(event) {
-  if(!tapedTwice) {
-      tapedTwice = true;
-      setTimeout( function() { tapedTwice = false; }, 300 );
-      return false;
-  }
-  event.preventDefault();
-  //action on double tap goes below
-  alert('You tapped me Twice !!!');
-}
-
+  
 function raycast(e){
 
   if(mobile){
@@ -58,7 +47,6 @@ function raycast(e){
     mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
     mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
   }
-  
 
   raycaster.setFromCamera( mouse, camera );
   var intersects = raycaster.intersectObjects(scene.children, true);
