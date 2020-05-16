@@ -14,8 +14,8 @@ if (typeof window.orientation !== 'undefined'){
 }
 
 //Camera position  (x,z,y)
-camera.position.set(-20,40,20);
-camera.lookAt(new THREE.Vector3(100,50,100));
+camera.position.set(-20,30,20);
+camera.lookAt(new THREE.Vector3(0,50,0));
 //camera.rotation.z = 5 / 6 * Math.PI;
 
 //Orbit Controls
