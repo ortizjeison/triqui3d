@@ -16,11 +16,11 @@ if (typeof window.orientation !== 'undefined'){
 
 //Light
 light = new THREE.DirectionalLight(0xffffff, 1.1);
-light.position.set(-95,115,-120);
+light.position.set(-71,168,80);
 scene.add(light);
 
 //Camera position  (x,z,y)
-camera.position.set(10,30,10);
+camera.position.set(10,30,40);
 camera.lookAt(new THREE.Vector3(100,0,100));
 //camera.rotation.z = 5 / 6 * Math.PI;
 
@@ -92,13 +92,5 @@ function raycasthover(e){
         unselect();
         select(getmeshC(objectid),playing);
     }
-  }
-}
-
-function nextplayer() {
-  if (playing==1) {
-    playing=2;
-  }else{
-    playing=1;
   }
 }

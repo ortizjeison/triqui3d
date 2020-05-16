@@ -3,6 +3,15 @@ var active1=0;
 var active2=0;
 var numfichas=9;
  
+
+function nextplayer() {
+    if (playing==1) {
+      playing=2;
+    }else{
+      playing=1;
+    }
+}
+
 function play(id) {
     //Verificar casilla seleccionada:
     //A,B,C <-id
