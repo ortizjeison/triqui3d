@@ -41,7 +41,7 @@ function place_cilindro(geo, Point, Board) {
             break;
     }
 
-    altura = 0.2;
+    altura = 0.35;
     separacion = 3;
     switch (Board) {
         case 'A':
@@ -107,7 +107,7 @@ function place_ficha(geo, Point, Board) {
             break;
     }
 
-    altura = 0.2;
+    altura = 0.4;
     delta = 4;
     separacion = 3;
     
@@ -150,7 +150,7 @@ function move_ficha(geo, dest) {
 
 //Función de rotar 3 mesh.
 function rotate_figura(g1,g2,g3){
-    delta=0.1;
+    delta=0.2;
     function loop(){
         g1.rotation.y +=delta;
         g2.rotation.y +=delta;
