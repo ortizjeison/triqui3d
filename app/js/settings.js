@@ -16,7 +16,7 @@ if (typeof window.orientation !== 'undefined'){
 
 //Light
 light = new THREE.DirectionalLight(0xffffff, 1.1);
-light.position.set(10,20,10);
+light.position.set(-95,115,-120);
 scene.add(light);
 
 //Camera position  (x,z,y)
