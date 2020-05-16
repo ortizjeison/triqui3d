@@ -36,11 +36,11 @@ window.addEventListener('resize', function() {
 renderer.domElement.addEventListener("touchstart", raycast_mobile);
 
 function raycast_mobile(e) {
-  alert("estamos en mobil beibi");
+  //alert("estamos en mobil beibi");
   mouse.x = +(e.touches[0].pageX / window.innerWidth) * 2 +-1;
   mouse.y = -(e.touches[0].pageY / window.innerHeight) * 2 + 1;
-  alert(mouse.x);
-  alert(mouse.y);
+  //alert(mouse.x);
+  //alert(mouse.y);
 }
 
 //Raycast click
