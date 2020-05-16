@@ -30,9 +30,18 @@ window.addEventListener('resize', function() {
     renderer.setSize(width,height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
-  });
+});
 
-  
+
+object.addEventListener("touchstart", raycast_mobile);
+
+function raycast_mobile(e) {
+  mouse.x = +(e.touches[0].pageX / window.innerWidth) * 2 +-1;
+  mouse.y = -(e.touches[0].pageY / window.innerHeight) * 2 + 1;
+  alert(mouse.x);
+  alert(mouse.y);
+}
+
 //Raycast click
 raycaster = new THREE.Raycaster();
 renderer.domElement.addEventListener('dblclick', raycast, false); 
