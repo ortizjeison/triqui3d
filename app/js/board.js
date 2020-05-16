@@ -3,12 +3,13 @@ loader = new THREE.ColladaLoader();
 loader.load('https://triqui.cf/app/assets/board.dae', function(collada) {
 
   var la_propia_textura = new THREE.TextureLoader();
-  var textu = la_propia_textura.load( "https://triqui.cf/app/assets/eia_grande.jpg");
+  var textu = la_propia_textura.load( "https://triqui.cf/app/assets/eia_mediana.jpg");
   var skyboxGeo = new THREE.SphereGeometry( 300, 300, 300);
   var mat = new THREE.MeshBasicMaterial( { map: textu});  
   var skybox = new THREE.Mesh( skyboxGeo, mat );
-  mat.side = THREE.BackSide; 
-  scene.add( skybox );  
+  mat.side = THREE.BackSide;
+  skybox.position.y = 50;
+  scene.add( skybox );
 
 
   collada_ratio=collada_ratio*10;
