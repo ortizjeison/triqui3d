@@ -85,7 +85,7 @@ function raycasthover(e){
       unselect();
 
       state = check(cil2board(objectid),cil2position(objectid));
-      console.log(state);
+      //console.log(state);
       if(state==0){
         select(getmeshC(objectid),playing);
       }
