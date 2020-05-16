@@ -65,7 +65,6 @@ function place_cilindro(geo, Point, Board) {
 //Place Fichas
 function place_ficha(geo, Point, Board) {
     scene.add(geo);
-    ans = -1;
     switch (Point) {
         case 1:
             geo.position.x = -3;
@@ -104,7 +103,6 @@ function place_ficha(geo, Point, Board) {
             geo.position.z = 3;  
             break;         
         default:
-            ans = -1;
             console.log("Error, revise el punto");
             break;
     }
@@ -112,9 +110,7 @@ function place_ficha(geo, Point, Board) {
     altura = 0.2;
     delta = 4;
     separacion = 3;
-
-   
-
+    
     switch (Board) {
         case 'A':
            
@@ -139,14 +135,13 @@ function move_ficha(geo, dest) {
     
     size=0;
     geo.scale.set(size,size,size);
-    delta=0.15;
+    delta=0.1;
 
     function loop(){
         if(geo.position.y>=dest){
             geo.position.y-=delta;
             size+=delta/4;
             geo.scale.set(size,size,size);
-
             requestAnimationFrame(loop);    
         }
     }
@@ -155,10 +150,11 @@ function move_ficha(geo, dest) {
 
 //Función de rotar 3 mesh.
 function rotate_figura(g1,g2,g3){
+    delta=0.1;
     function loop(){
-        g1.rotation.y +=0.1;
-        g2.rotation.y +=0.1;
-        g3.rotation.y +=0.1;
+        g1.rotation.y +=delta;
+        g2.rotation.y +=delta;
+        g3.rotation.y +=delta;
         requestAnimationFrame(loop);
     }
     loop();
