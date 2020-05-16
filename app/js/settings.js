@@ -13,17 +13,6 @@ if (typeof window.orientation !== 'undefined'){
   mobile = true;
 }
 
-
-//Light
-light = new THREE.DirectionalLight(0xffffff, 1.1);
-light.position.set(-71,168,80);
-scene.add(light);
-
-//Otra luz de reflejo desde abajo
-light2 = new THREE.DirectionalLight(0xffffff, 0.5);
-light2.position.set(0,-20,0);
-scene.add(light2);
-
 //Camera position  (x,z,y)
 camera.position.set(-20,40,20);
 camera.lookAt(new THREE.Vector3(100,50,100));
@@ -34,52 +23,50 @@ controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.minDistance = 10; //zoom in 
 controls.maxDistance = 50; //zoom out
 
-//Axis
-var axesHelper = new THREE.AxesHelper(1);
-//scene.add(axesHelper);
-
 //Responsive Function
 window.addEventListener('resize', function() {
-    var width= window.innerWidth;
+  var width= window.innerWidth;
     var height = window.innerHeight;
     renderer.setSize(width,height);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
-});
-
+  });
+  
 //Raycast click
 raycaster = new THREE.Raycaster();
 renderer.domElement.addEventListener('dblclick', raycast, false); 
-
+  
 function raycast(e){
-
+    
   if(mobile){
     mouse.x = +(e.targetTouches[0].pageX / window.innerWidth) * 2 +-1;
     mouse.y = -(e.targetTouches[0].pageY / window.innerHeight) * 2 + 1;
+    alert(mouse.x);
+    alert(mouse.y);
   }else{
     mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
     mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
   }
   raycaster.setFromCamera( mouse, camera );
   var intersects = raycaster.intersectObjects(scene.children, true);
-
+  
   if(intersects.length>0){
     var selected = intersects[0].object;
-
-        if(selected.geometry.type=="CylinderGeometry") {                            
-            play(selected.id);              
-        }else if(selected.geometry.type=="IcosahedronBufferGeometry" || selected.geometry.type=="OctahedronBufferGeometry"){
-            var cilindro_ficha = intersects[1].object.id; //el cilindro de la ficha                                
-        }
-    }else{
-        //console.log("Meeen, no has seleccionado nadaaa");
+    
+    if(selected.geometry.type=="CylinderGeometry") {                            
+      play(selected.id);              
+    }else if(selected.geometry.type=="IcosahedronBufferGeometry" || selected.geometry.type=="OctahedronBufferGeometry"){
+      var cilindro_ficha = intersects[1].object.id; //el cilindro de la ficha                                
     }
+  }else{
+    //console.log("Meeen, no has seleccionado nadaaa");
+  }
 }
-
+  
 //Raycast hover
 renderer.domElement.addEventListener('mousemove',raycasthover,false);
 function raycasthover(e){
-
+  
   if(mobile){
     mouse.x = +(e.targetTouches[0].pageX / window.innerWidth) * 2 +-1;
     mouse.y = -(e.targetTouches[0].pageY / window.innerHeight) * 2 + 1;
@@ -87,15 +74,30 @@ function raycasthover(e){
     mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
     mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
   }
-
+  
   raycaster.setFromCamera( mouse, camera );
   var intersects = raycaster.intersectObjects(scene.children, true);
-
+  
   if(intersects.length>0){
     if(intersects[0].object.geometry.type=="CylinderGeometry") {
-        var objectid = intersects[0].object.id;
-        unselect();
-        select(getmeshC(objectid),playing);
+      var objectid = intersects[0].object.id;
+      unselect();
+      select(getmeshC(objectid),playing);
     }
   }
 }
+
+//Light
+light = new THREE.DirectionalLight(0xffffff, 1.1);
+light.position.set(-71,168,80);
+
+//Otra luz de reflejo desde abajo
+//light2 = new THREE.DirectionalLight(0xffffff, 0.5);
+//light2.position.set(0,-20,0);
+
+//Axis
+var axesHelper = new THREE.AxesHelper(1);
+
+//scene.add(light2);
+scene.add(light);
+//scene.add(axesHelper);
