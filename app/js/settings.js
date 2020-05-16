@@ -20,7 +20,7 @@ light.position.set(-71,168,80);
 scene.add(light);
 
 //Camera position  (x,z,y)
-camera.position.set(36,29,20);
+camera.position.set(-20,40,20);
 camera.lookAt(new THREE.Vector3(100,50,100));
 //camera.rotation.z = 5 / 6 * Math.PI;
 
