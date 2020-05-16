@@ -20,14 +20,14 @@ light.position.set(-71,168,80);
 scene.add(light);
 
 //Camera position  (x,z,y)
-camera.position.set(10,30,40);
+camera.position.set(36,29,20);
 camera.lookAt(new THREE.Vector3(100,0,100));
 //camera.rotation.z = 5 / 6 * Math.PI;
 
 //Orbit Controls
 controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.minDistance = 10; //zoom in 
-controls.maxDistance = 200; //zoom out
+controls.maxDistance = 50; //zoom out
 
 //Axis
 var axesHelper = new THREE.AxesHelper(1);
