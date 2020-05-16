@@ -41,6 +41,21 @@ function raycast_mobile(e) {
   mouse.y = -(e.touches[0].pageY / window.innerHeight) * 2 + 1;
   //alert(mouse.x);
   //alert(mouse.y);
+
+  raycaster.setFromCamera( mouse, camera );
+  var intersects = raycaster.intersectObjects(scene.children, true);
+  
+  if(intersects.length>0){
+    var selected = intersects[0].object;
+    
+    if(selected.geometry.type=="CylinderGeometry") {                            
+      play(selected.id);              
+    }else if(selected.geometry.type=="IcosahedronBufferGeometry" || selected.geometry.type=="OctahedronBufferGeometry"){
+      var cilindro_ficha = intersects[1].object.id; //el cilindro de la ficha                                
+    }
+  }else{
+    //console.log("Meeen, no has seleccionado nadaaa");
+  }
 }
 
 //Raycast click
@@ -48,17 +63,10 @@ raycaster = new THREE.Raycaster();
 renderer.domElement.addEventListener('dblclick', raycast, false); 
   
 function raycast(e){
-    
-  if(mobile){
-    alert("mobile detected");
-    mouse.x = +(e.touches[0].pageX / window.innerWidth) * 2 +-1;
-    mouse.y = -(e.touches[0].pageY / window.innerHeight) * 2 + 1;
-    alert(mouse.x);
-    alert(mouse.y);
-  }else{
-    mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
-    mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
-  }
+
+  mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
+  mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+
   raycaster.setFromCamera( mouse, camera );
   var intersects = raycaster.intersectObjects(scene.children, true);
   
