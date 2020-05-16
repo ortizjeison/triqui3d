@@ -33,7 +33,7 @@ window.addEventListener('resize', function() {
 });
 
 
-renderer.domElement.addEventListener("touchstart", raycast_mobile);
+renderer.domElement.addEventListener("touchstart", raycast);
 
 function raycast_mobile(e) {
   //alert("estamos en mobil beibi");
@@ -64,8 +64,13 @@ renderer.domElement.addEventListener('dblclick', raycast, false);
   
 function raycast(e){
 
-  mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
-  mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+  if(mobile){
+    mouse.x = +(e.touches[0].pageX / window.innerWidth) * 2 +-1;
+    mouse.y = -(e.touches[0].pageY / window.innerHeight) * 2 + 1;
+  }else{
+    mouse.x = ( e.clientX / window.innerWidth ) * 2 - 1;
+    mouse.y = - ( e.clientY / window.innerHeight ) * 2 + 1;
+  }
 
   raycaster.setFromCamera( mouse, camera );
   var intersects = raycaster.intersectObjects(scene.children, true);
