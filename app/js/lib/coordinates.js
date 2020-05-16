@@ -65,6 +65,7 @@ function place_cilindro(geo, Point, Board) {
 //Place Fichas
 function place_ficha(geo, Point, Board) {
     scene.add(geo);
+    unselect();
     switch (Point) {
         case 1:
             geo.position.x = -3;
