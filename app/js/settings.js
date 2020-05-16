@@ -33,7 +33,7 @@ window.addEventListener('resize', function() {
 });
 
 
-object.addEventListener("touchstart", raycast_mobile);
+renderer.domElement.addEventListener("touchstart", raycast_mobile);
 
 function raycast_mobile(e) {
   alert("estamos en mobil beibi");
