@@ -112,8 +112,12 @@ function place_ficha(geo, Point, Board) {
     altura = 0.2;
     delta = 4;
     separacion = 3;
+
+   
+
     switch (Board) {
         case 'A':
+           
             geo.position.y=altura+delta;
             move_ficha(geo,altura);
             break;
@@ -132,16 +136,17 @@ function place_ficha(geo, Point, Board) {
 }
 
 function move_ficha(geo, dest) {
+    
     size=0;
     geo.scale.set(size,size,size);
-    delta=0.1;
+    delta=0.15;
 
     function loop(){
         if(geo.position.y>=dest){
             geo.position.y-=delta;
             size+=delta/4;
             geo.scale.set(size,size,size);
-            
+
             requestAnimationFrame(loop);    
         }
     }
