@@ -32,31 +32,7 @@ window.addEventListener('resize', function() {
     camera.updateProjectionMatrix();
 });
 
-
 renderer.domElement.addEventListener("touchstart", raycast);
-
-function raycast_mobile(e) {
-  //alert("estamos en mobil beibi");
-  mouse.x = +(e.touches[0].pageX / window.innerWidth) * 2 +-1;
-  mouse.y = -(e.touches[0].pageY / window.innerHeight) * 2 + 1;
-  //alert(mouse.x);
-  //alert(mouse.y);
-
-  raycaster.setFromCamera( mouse, camera );
-  var intersects = raycaster.intersectObjects(scene.children, true);
-  
-  if(intersects.length>0){
-    var selected = intersects[0].object;
-    
-    if(selected.geometry.type=="CylinderGeometry") {                            
-      play(selected.id);              
-    }else if(selected.geometry.type=="IcosahedronBufferGeometry" || selected.geometry.type=="OctahedronBufferGeometry"){
-      var cilindro_ficha = intersects[1].object.id; //el cilindro de la ficha                                
-    }
-  }else{
-    //console.log("Meeen, no has seleccionado nadaaa");
-  }
-}
 
 //Raycast click
 raycaster = new THREE.Raycaster();
