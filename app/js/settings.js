@@ -32,6 +32,16 @@ window.addEventListener('resize', function() {
     camera.updateProjectionMatrix();
   });
   
+
+
+function touch( event ) {
+  alert("Touch Start");
+  event.preventDefault();
+  event.clientX = event.touches[0].pageX;
+  event.clientY = event.touches[0].pageY;
+
+}
+
 //Raycast click
 raycaster = new THREE.Raycaster();
 renderer.domElement.addEventListener('dblclick', raycast, false); 
