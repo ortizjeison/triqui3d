@@ -31,17 +31,8 @@ window.addEventListener('resize', function() {
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
   });
+
   
-
-
-function touch( event ) {
-  alert("Touch Start");
-  event.preventDefault();
-  event.clientX = event.touches[0].pageX;
-  event.clientY = event.touches[0].pageY;
-
-}
-
 //Raycast click
 raycaster = new THREE.Raycaster();
 renderer.domElement.addEventListener('dblclick', raycast, false); 
@@ -49,8 +40,9 @@ renderer.domElement.addEventListener('dblclick', raycast, false);
 function raycast(e){
     
   if(mobile){
-    mouse.x = +(e.targetTouches[0].pageX / window.innerWidth) * 2 +-1;
-    mouse.y = -(e.targetTouches[0].pageY / window.innerHeight) * 2 + 1;
+    alert("mobile detected");
+    mouse.x = +(e.touches[0].pageX / window.innerWidth) * 2 +-1;
+    mouse.y = -(e.touches[0].pageY / window.innerHeight) * 2 + 1;
     alert(mouse.x);
     alert(mouse.y);
   }else{
