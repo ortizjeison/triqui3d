@@ -1,5 +1,4 @@
 function place_cilindro(geo, Point, Board) {
-    ans = -1;
     switch (Point) {
         case 1:
             geo.position.x = -3;
@@ -38,7 +37,6 @@ function place_cilindro(geo, Point, Board) {
             geo.position.z = 3;  
             break;         
         default:
-            ans = -1;
             console.log("Error, revise el punto");
             break;
     }
@@ -118,18 +116,14 @@ function place_ficha(geo, Point, Board) {
         case 'A':
             geo.position.y=altura+delta;
             move_ficha(geo,altura);
-            //console.log("Board A");
             break;
         case 'B':
             geo.position.y=(altura+2*separacion)+delta;
             move_ficha(geo,altura+2*separacion);
-            //console.log("Board B");
             break;
         case 'C':
             geo.position.y=(altura+4*separacion)+delta;
             move_ficha(geo,altura+4*separacion);
-            //geo.position.y=altura+4*separacion;
-            //console.log("Board C");
             break;
         default:
             console.log("Revise el board please");
@@ -138,8 +132,6 @@ function place_ficha(geo, Point, Board) {
 }
 
 function move_ficha(geo, dest) {
-    //console.log(geo.position.y);
-    //console.log(dest);
     size=0;
     geo.scale.set(size,size,size);
     delta=0.1;
@@ -150,8 +142,6 @@ function move_ficha(geo, dest) {
             size+=delta/4;
             geo.scale.set(size,size,size);
             
-            //console.log(geo.position.y);
-            //console.log(dest);
             requestAnimationFrame(loop);    
         }
     }
