@@ -52,23 +52,6 @@ function play(id) {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var Render = function(){
     //console.log(cosa);
     requestAnimationFrame(Render);

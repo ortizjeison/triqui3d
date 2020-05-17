@@ -2,6 +2,7 @@
 loader = new THREE.ColladaLoader();
 loader.load('https://triqui.cf/app/assets/board.dae', function(collada) {
 
+  
   var la_propia_textura = new THREE.TextureLoader();
   var textu = la_propia_textura.load( "https://triqui.cf/app/assets/casetas_final.jpg");
   var skyboxGeo = new THREE.SphereGeometry( 400, 400, 400);
@@ -10,7 +11,6 @@ loader.load('https://triqui.cf/app/assets/board.dae', function(collada) {
   mat.side = THREE.BackSide;
   skybox.position.y = 40;
   scene.add( skybox );
-
 
   collada_ratio=collada_ratio*10;
   collada.scene.scale.set(collada_ratio, collada_ratio, collada_ratio);
