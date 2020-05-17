@@ -26,7 +26,7 @@ function modal_ganador(){
     title: "<h3>¡Jugador "+nextplayer()+", ganaste!</h3>",
     confirmButtonColor: '#10e03d',
     confirmButtonText:"<h3>¿Revancha o qué?</h3>",
-    allowOutsideClick: true,
+    allowOutsideClick: false,
     allowEscapeKey: false,
     background:'rgba(255,255,255,0.8)'
     }).then((result) => {
