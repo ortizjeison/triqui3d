@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 body { 
     margin: 0;
     cursor: url("assets/cursor.png"), auto;
 }
 canvas { 
     display: block; 
+}
+
+h3{
+    margin: 0px;
+    font-family: 'Pangolin', cursive;
 }

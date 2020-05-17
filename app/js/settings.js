@@ -91,6 +91,8 @@ function raycasthover(e){
         select(getmeshC(objectid),playing);
       }
 
+    }else{
+      unselect();
     }
   }
 }

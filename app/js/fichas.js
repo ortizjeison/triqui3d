@@ -42,5 +42,8 @@ function restart() {
         scene.remove(p1[index]);
         scene.remove(p2[index]);
     }
+    playing=1;
+    active1=0;
+    active2=0;
     start();
 }

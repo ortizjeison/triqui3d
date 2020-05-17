@@ -2,7 +2,6 @@ var playing = 1;
 var active1=0;
 var active2=0;
 var numfichas=9;
- 
 
 function nextplayer() {
     if (playing==1) {
@@ -36,7 +35,7 @@ function play(id) {
                 place_ficha(p1[active1],s_position,s_board);
                 nextplayer();
                 winner();
-            }else{alert("Ya no tienes fichas disponibles, mueve alguna");}
+            }else{modal_empate();}
         }else if(active2<numfichas){
             active2++;
             //El j2 tiene fichas por jugar
@@ -44,7 +43,7 @@ function play(id) {
             place_ficha(p2[active2],s_position,s_board);
             nextplayer();
             winner();
-        }else{alert("Ya no tienes fichas disponibles, mueve alguna");}
+        }else{modal_empate();}
         
         //No hay disponibles si active==9
         console.log("P1: "+active1);
