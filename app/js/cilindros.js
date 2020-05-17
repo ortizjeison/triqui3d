@@ -4,8 +4,8 @@ select1_color = 0x03dffc;
 select2_color = 0xfcd303;
 var geo_cilindro = new THREE.CylinderGeometry(1,1,0.4,32);
 var m_cilindro = new THREE.MeshPhongMaterial({color: color_default,opacity: 0,transparent: true,});
-var m_select1 = new THREE.MeshPhongMaterial({color: select1_color,opacity: 0.9,transparent: true,});
-var m_select2 = new THREE.MeshPhongMaterial({color: select2_color,opacity: 0.9,transparent: true,});
+var m_select1 = new THREE.MeshPhongMaterial({color: select1_color,opacity: 0.6,transparent: true,});
+var m_select2 = new THREE.MeshPhongMaterial({color: select2_color,opacity: 0.6,transparent: true,});
 
 //Tablero A
 var a1 = new THREE.Mesh( geo_cilindro, m_cilindro );
