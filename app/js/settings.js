@@ -1,6 +1,6 @@
 var scene = new THREE.Scene();
 var aspect = window.innerWidth / window.innerHeight;
-var camera = new THREE.PerspectiveCamera(40, aspect, 1, 500);//(perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
+var camera = new THREE.PerspectiveCamera(70, aspect, 1, 450);//(perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
 var raycaster, mouse = { x : 0, y : 0 };
 var renderer = new THREE.WebGLRenderer();
 var collada_ratio = 0.2538555;
@@ -14,8 +14,9 @@ if (typeof window.orientation !== 'undefined'){
 }
 
 //Camera position  (x,z,y)
-camera.position.set(-20,30,20);
-camera.lookAt(new THREE.Vector3(0,50,0));
+camera.lookAt(new THREE.Vector3(0,0,0));
+camera.position.set(21.133602170013468,15.770322844272867,0.20546671782147236);
+
 //camera.rotation.z = 5 / 6 * Math.PI;
 
 //Orbit Controls
