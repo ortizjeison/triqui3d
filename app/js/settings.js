@@ -1,6 +1,6 @@
 var scene = new THREE.Scene();
 var aspect = window.innerWidth / window.innerHeight;
-var camera = new THREE.PerspectiveCamera(70, aspect, 1, 450);//(perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
+var camera = new THREE.PerspectiveCamera(65, aspect, 1, 450);//(perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
 var raycaster, mouse = { x : 0, y : 0 };
 var renderer = new THREE.WebGLRenderer();
 var collada_ratio = 0.2538555;
