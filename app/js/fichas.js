@@ -21,7 +21,7 @@ var first2 = 52;
 var last2 = 60;
 
 var geo_p2 = new THREE.OctahedronBufferGeometry(0.9,0);
-var m_p2 = new THREE.MeshPhongMaterial( {color: 0x3ae851} );
+var m_p2 = new THREE.MeshPhongMaterial( {color: 0xfcd303} );
 
 var fb1 = new THREE.Mesh(geo_p2, m_p2);
 var fb2 = new THREE.Mesh(geo_p2, m_p2);

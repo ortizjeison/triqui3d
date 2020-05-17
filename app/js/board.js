@@ -8,7 +8,7 @@ loader.load('https://triqui.cf/app/assets/board.dae', function(collada) {
   var mat = new THREE.MeshBasicMaterial( { map: textu});  
   var skybox = new THREE.Mesh( skyboxGeo, mat );
   mat.side = THREE.BackSide;
-  skybox.position.y = 60;
+  skybox.position.y = 40;
   scene.add( skybox );
 
 
