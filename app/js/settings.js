@@ -15,7 +15,7 @@ if (typeof window.orientation !== 'undefined'){
 
 //Camera position  (x,z,y)
 camera.lookAt(new THREE.Vector3(0,0,0));
-camera.position.set(-21.133602170013468,15.770322844272867,0.20546671782147236);
+camera.position.set(-20.226014146077315,15.570536706419034,0.43910247545124903);
 
 //camera.rotation.z = 5 / 6 * Math.PI;
 
