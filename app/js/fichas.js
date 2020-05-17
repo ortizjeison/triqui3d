@@ -1,7 +1,7 @@
 
 //Player 1
 var first1 = 43;
-var last1 = 51;
+var last1 = first1+numfichas-1;
 var geo_p1 = new THREE.IcosahedronBufferGeometry(0.9,0);
 var m_p1 = new THREE.MeshPhongMaterial( {color: 0x03dffc} );
 
@@ -18,8 +18,8 @@ var fa9 = new THREE.Mesh(geo_p1, m_p1);
 var p1=[null,fa1,fa2,fa3,fa4,fa5,fa6,fa7,fa8,fa9];
 
 //Player 2
-var first2 = 52;
-var last2 = 60;
+var first2 = last1+1;
+var last2 = first2+numfichas-1;
 
 var geo_p2 = new THREE.OctahedronBufferGeometry(0.9,0);
 var m_p2 = new THREE.MeshPhongMaterial( {color: 0xfcd303} );
