@@ -15,9 +15,8 @@ C[2] = new Array(4);
 C[3] = new Array(4);
 
 start();
+//Limpiar boards
 function start() {
-
-    //Limpiar boards
     clear_board(A);
     clear_board(B);
     clear_board(C);
@@ -28,7 +27,6 @@ function clear_board(M){
     M[1].fill(0,1,4);
     M[2].fill(0,1,4);
     M[3].fill(0,1,4);
-    //console.log("listo");   
 }
 
 //Retorna el valor actual de la pos en la matriz M
@@ -238,11 +236,6 @@ function cil2position(id) {
         console.log("cilindro error");
         return null;
     }
-}
-
-//Recibe 3 ids de ficha y las pone a rotar.
-function rotate(f1,f2,f3){
-    rotate_figura(getmeshF(f1),getmeshF(f2),getmeshF(f3));
 }
 
 function check(Board, pos) {

@@ -9,6 +9,7 @@ function nextplayer() {
     }else{
       playing=1;
     }
+    return playing;
 }
 
 function play(id) {
@@ -45,7 +46,6 @@ function play(id) {
             winner();
         }else{modal_empate();}
         
-        //No hay disponibles si active==9
         console.log("P1: "+active1);
         console.log("P2: "+active2);
     }
@@ -53,7 +53,6 @@ function play(id) {
 }
 
 var Render = function(){
-    //console.log(cosa);
     requestAnimationFrame(Render);
     renderer.render(scene, camera);
 };

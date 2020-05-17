@@ -165,7 +165,12 @@ function move_ficha(geo, dest) {
     loop1();
 };
 
-//Función de rotar 3 mesh.
+//Recibe 3 ids de ficha y las pone a rotar.
+function rotate(f1,f2,f3){
+    rotate_figura(getmeshF(f1),getmeshF(f2),getmeshF(f3));
+}
+
+//Rotar 3 mesh.
 function rotate_figura(g1,g2,g3){
     delta=0.2;
     function loop(){
