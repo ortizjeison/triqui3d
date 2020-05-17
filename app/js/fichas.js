@@ -38,6 +38,8 @@ var p2=[null,fb1,fb2,fb3,fb4,fb5,fb6,fb7,fb8,fb9];
 //place_ficha(p1[1],1,'A');
 
 function restart() {
+    location.reload();
+/*
     for (let index = 0; index < p1.length; index++) {
         scene.remove(p1[index]);
         scene.remove(p2[index]);
@@ -46,4 +48,8 @@ function restart() {
     active1=0;
     active2=0;
     start();
+*/
 }
+
+
+    
