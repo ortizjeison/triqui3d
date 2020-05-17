@@ -100,14 +100,8 @@ function raycasthover(e){
 //Light
 light = new THREE.DirectionalLight(0xffffff, 1.1);
 light.position.set(-71,168,80);
-
-//Otra luz de reflejo desde abajo
-//light2 = new THREE.DirectionalLight(0xffffff, 0.5);
-//light2.position.set(0,-20,0);
+scene.add(light);
 
 //Axis
 var axesHelper = new THREE.AxesHelper(1);
-
-//scene.add(light2);
-scene.add(light);
 //scene.add(axesHelper);
