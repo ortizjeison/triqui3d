@@ -2,13 +2,13 @@ var scene = new THREE.Scene();
 var aspect = window.innerWidth / window.innerHeight;
 var camera = new THREE.PerspectiveCamera(65, aspect, 1, 600);//(perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
 var raycaster, mouse = { x : 0, y : 0 };
-var renderer = new THREE.WebGLRenderer();
+var renderer = new THREE.WebGLRenderer({ antialias: true }); //renderer.setSize(canvasWidth, canvasHeight); 
 var collada_ratio = 0.2538555;
-renderer.shadowMapEnabled = true;
+renderer.shadowMapEnabled = true; renderer.shadowMapSoft = true; renderer.shadowCameraNear = 3; renderer.shadowCameraFar = camera.far; renderer.shadowCameraFov = 50; renderer.shadowMapBias = 0.0039; renderer.shadowMapDarkness = 0.5; renderer.shadowMapWidth = 1024; renderer.shadowMapHeight = 1024; 
 
-renderer.setClearColor( 0xffffff );
-renderer.setSize( window.innerWidth, window.innerHeight );//establecer el tamaño en el que queremos que muestre nuestra aplicación
-document.body.appendChild(renderer.domElement);
+// renderer.setClearColor( 0xffffff );
+// renderer.setSize( window.innerWidth, window.innerHeight );//establecer el tamaño en el que queremos que muestre nuestra aplicación
+// document.body.appendChild(renderer.domElement);
 
 mobile = false;
 if (typeof window.orientation !== 'undefined'){
@@ -106,17 +106,19 @@ var axesHelper = new THREE.AxesHelper(1);
 //scene.add(axesHelper);
 
 // Sombra
-renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
+// renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
 //Light
-light = new THREE.DirectionalLight(0xffffff, 1.1 , 100);
+light = new THREE.DirectionalLight(0xffffff);
 light.position.set(-71,168,80);
-light.castShadow = true;            // default false
+// light.castShadow = true;   
+// light.shadowDarkness = 0.5; light.shadowCameraVisible = true;         // default false
+// light.shadowCameraNear = 2; light.shadowCameraFar = 5; light.shadowCameraLeft = -0.5; light.shadowCameraRight = 0.5; light.shadowCameraTop = 0.5; light.shadowCameraBottom = -0.5;
 scene.add(light);
 
-light.shadow.mapSize.width = 512;  
-light.shadow.mapSize.height = 512; 
-light.shadow.camera.near = 0.5;       
-light.shadow.camera.far = 500     
+// light.shadow.mapSize.width = 512;  
+// light.shadow.mapSize.height = 512; 
+// light.shadow.camera.near = 0.5;       
+// light.shadow.camera.far = 500     
 
 // var sphereGeometry = new THREE.SphereBufferGeometry( 5, 32, 32 );
 // var sphereMaterial = new THREE.MeshStandardMaterial( { color: 0xff0000 } );
@@ -133,5 +135,5 @@ light.shadow.camera.far = 500
 // scene.add( plane );
 
 //Create a helper for the shadow camera (optional)
-var helper = new THREE.CameraHelper( light.shadow.camera );
-scene.add( helper );
+// var helper = new THREE.CameraHelper( light.shadow.camera );
+// scene.add( helper );

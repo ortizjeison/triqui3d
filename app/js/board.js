@@ -9,7 +9,7 @@ loader.load('https://triqui.cf/app/assets/board.dae', function(collada) {
   var skyboxGeo = new THREE.SphereGeometry( 400, 400, 400);
   var mat = new THREE.MeshLambertMaterial( { map: textu});  
   var skybox = new THREE.Mesh( skyboxGeo, mat );
-  skybox.receiveShadow =true;
+  // skybox.receiveShadow =true;
   mat.side = THREE.BackSide;
   skybox.position.y = 40;
   scene.add( skybox );
