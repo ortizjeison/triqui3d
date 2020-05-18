@@ -4,8 +4,6 @@ var camera = new THREE.PerspectiveCamera(65, aspect, 1, 600);//(perspectiva) (FO
 var raycaster, mouse = { x : 0, y : 0 };
 var renderer = new THREE.WebGLRenderer();
 var collada_ratio = 0.2538555;
-renderer.shadowMapEnabled = true;
-
 renderer.setClearColor( 0xffffff );
 renderer.setSize( window.innerWidth, window.innerHeight );//establecer el tamaño en el que queremos que muestre nuestra aplicación
 document.body.appendChild(renderer.domElement);
@@ -99,39 +97,11 @@ function raycasthover(e){
   }
 }
 
-
+//Light
+light = new THREE.DirectionalLight(0xffffff, 1.1);
+light.position.set(-71,168,80);
+scene.add(light);
 
 //Axis
 var axesHelper = new THREE.AxesHelper(1);
 //scene.add(axesHelper);
-
-// Sombra
-renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
-//Light
-light = new THREE.DirectionalLight(0xffffff, 1.1 , 100);
-light.position.set(-71,168,80);
-light.castShadow = true;            // default false
-scene.add(light);
-
-light.shadow.mapSize.width = 512;  
-light.shadow.mapSize.height = 512; 
-light.shadow.camera.near = 0.5;       
-light.shadow.camera.far = 500     
-
-// var sphereGeometry = new THREE.SphereBufferGeometry( 5, 32, 32 );
-// var sphereMaterial = new THREE.MeshStandardMaterial( { color: 0xff0000 } );
-// var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
-// sphere.castShadow = true; //default is false
-// sphere.receiveShadow = false; //default
-// scene.add( sphere );
-
-// //Create a plane that receives shadows (but does not cast them)
-// var planeGeometry = new THREE.PlaneBufferGeometry( 20, 20, 32, 32 );
-// var planeMaterial = new THREE.MeshStandardMaterial( { color: 0x00ff00 } )
-// var plane = new THREE.Mesh( planeGeometry, planeMaterial );
-// plane.receiveShadow = true;
-// scene.add( plane );
-
-//Create a helper for the shadow camera (optional)
-var helper = new THREE.CameraHelper( light.shadow.camera );
-scene.add( helper );
