@@ -3,7 +3,7 @@ color_default = 0xffffff;
 select1_color = 0x03dffc;
 select2_color = 0xfcd303;
 var geo_cilindro = new THREE.CylinderGeometry(1,1,0.4,32);
-var m_cilindro = new THREE.MeshPhongMaterial({color: color_default,opacity: 0,transparent: true,});
+var m_cilindro = new THREE.MeshLambertMaterial({color: color_default,opacity: 0,transparent: true,});
 var m_select1 = new THREE.MeshPhongMaterial({color: select1_color,opacity: 0.6,transparent: true,});
 var m_select2 = new THREE.MeshPhongMaterial({color: select2_color,opacity: 0.6,transparent: true,});
 
@@ -21,6 +21,15 @@ var a9 = new THREE.Mesh( geo_cilindro, m_cilindro );
 place_cilindro(a1,1,'A');place_cilindro(a2,2,'A');place_cilindro(a3,3,'A');
 place_cilindro(a4,4,'A');place_cilindro(a5,5,'A');place_cilindro(a6,6,'A');
 place_cilindro(a7,7,'A');place_cilindro(a8,8,'A');place_cilindro(a9,9,'A');
+a1.castShadow=true;
+a2.castShadow=true;
+a3.castShadow=true;
+a4.castShadow=true;
+a5.castShadow=true;
+a6.castShadow=true;
+a7.castShadow=true;
+a8.castShadow=true;
+a9.castShadow=true;
 
 scene.add(a1);scene.add(a2);scene.add(a3);
 scene.add(a4);scene.add(a5);scene.add(a6);
