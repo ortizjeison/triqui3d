@@ -2,9 +2,9 @@ var scene = new THREE.Scene();
 var aspect = window.innerWidth / window.innerHeight;
 var camera = new THREE.PerspectiveCamera(65, aspect, 1, 600);//(perspectiva) (FOV,aspect.ratio,near,far(todo lo que no se podra ver))
 var raycaster, mouse = { x : 0, y : 0 };
-var renderer = new THREE.WebGLRenderer({ antialias: true }); //renderer.setSize(canvasWidth, canvasHeight); 
+var renderer = new THREE.WebGLRenderer(); //renderer.setSize(canvasWidth, canvasHeight); 
 var collada_ratio = 0.2538555;
-renderer.shadowMapEnabled = true; renderer.shadowMapSoft = true; renderer.shadowCameraNear = 3; renderer.shadowCameraFar = camera.far; renderer.shadowCameraFov = 50; renderer.shadowMapBias = 0.0039; renderer.shadowMapDarkness = 0.5; renderer.shadowMapWidth = 1024; renderer.shadowMapHeight = 1024; 
+// renderer.shadowMapEnabled = true; renderer.shadowMapSoft = true; renderer.shadowCameraNear = 3; renderer.shadowCameraFar = camera.far; renderer.shadowCameraFov = 50; renderer.shadowMapBias = 0.0039; renderer.shadowMapDarkness = 0.5; renderer.shadowMapWidth = 1024; renderer.shadowMapHeight = 1024; 
 
 // renderer.setClearColor( 0xffffff );
 // renderer.setSize( window.innerWidth, window.innerHeight );//establecer el tamaño en el que queremos que muestre nuestra aplicación

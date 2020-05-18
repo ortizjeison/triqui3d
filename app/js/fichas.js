@@ -3,7 +3,7 @@
 var first1 = 43;
 var last1 = first1+numfichas-1;
 var geo_p1 = new THREE.IcosahedronBufferGeometry(0.9,0);
-var m_p1 = new THREE.MeshLambertMaterial( {color: 0x03dffc,shadowSide: THREE.DoubleSide} );
+var m_p1 = new THREE.MeshLambertMaterial( {color: 0x03dffc,} );
 
 var fa1 = new THREE.Mesh(geo_p1, m_p1);
 var fa2 = new THREE.Mesh(geo_p1, m_p1);
@@ -31,7 +31,7 @@ var first2 = last1+1;
 var last2 = first2+numfichas-1;
 
 var geo_p2 = new THREE.OctahedronBufferGeometry(0.9,0);
-var m_p2 = new THREE.MeshLambertMaterial( {color: 0xfcd303,shadowSide: THREE.DoubleSide} );
+var m_p2 = new THREE.MeshLambertMaterial( {color: 0xfcd303,} );
 
 var fb1 = new THREE.Mesh(geo_p2, m_p2);
 var fb2 = new THREE.Mesh(geo_p2, m_p2);

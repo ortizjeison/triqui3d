@@ -3,7 +3,7 @@ color_default = 0xffffff;
 select1_color = 0x03dffc;
 select2_color = 0xfcd303;
 var geo_cilindro = new THREE.CylinderGeometry(1,1,0.4,32);
-var m_cilindro = new THREE.MeshLambertMaterial({color: color_default,opacity: 0,transparent: true,shadowSide: THREE.DoubleSide});
+var m_cilindro = new THREE.MeshLambertMaterial({color: color_default,opacity: 0,transparent: true,});
 var m_select1 = new THREE.MeshPhongMaterial({color: select1_color,opacity: 0.6,transparent: true,});
 var m_select2 = new THREE.MeshPhongMaterial({color: select2_color,opacity: 0.6,transparent: true,});
 
