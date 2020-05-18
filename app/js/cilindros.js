@@ -3,7 +3,7 @@ color_default = 0xffffff;
 select1_color = 0x03dffc;
 select2_color = 0xfcd303;
 var geo_cilindro = new THREE.CylinderGeometry(1,1,0.4,32);
-var m_cilindro = new THREE.MeshLambertMaterial({color: color_default,opacity: 0,transparent: true,});
+var m_cilindro = new THREE.MeshPhongMaterial({color: color_default,opacity: 0,transparent: true,});
 var m_select1 = new THREE.MeshPhongMaterial({color: select1_color,opacity: 0.6,transparent: true,});
 var m_select2 = new THREE.MeshPhongMaterial({color: select2_color,opacity: 0.6,transparent: true,});
 
@@ -21,15 +21,6 @@ var a9 = new THREE.Mesh( geo_cilindro, m_cilindro );
 place_cilindro(a1,1,'A');place_cilindro(a2,2,'A');place_cilindro(a3,3,'A');
 place_cilindro(a4,4,'A');place_cilindro(a5,5,'A');place_cilindro(a6,6,'A');
 place_cilindro(a7,7,'A');place_cilindro(a8,8,'A');place_cilindro(a9,9,'A');
-// a1.castShadow=true;
-// a2.castShadow=true;
-// a3.castShadow=true;
-// a4.castShadow=true;
-// a5.castShadow=true;
-// a6.castShadow=true;
-// a7.castShadow=true;
-// a8.castShadow=true;
-// a9.castShadow=true;
 
 scene.add(a1);scene.add(a2);scene.add(a3);
 scene.add(a4);scene.add(a5);scene.add(a6);
@@ -50,16 +41,6 @@ place_cilindro(b1,1,'B');place_cilindro(b2,2,'B');place_cilindro(b3,3,'B');
 place_cilindro(b4,4,'B');place_cilindro(b5,5,'B');place_cilindro(b6,6,'B');
 place_cilindro(b7,7,'B');place_cilindro(b8,8,'B');place_cilindro(b9,9,'B');
 
-b1.castShadow=true;
-b2.castShadow=true;
-b3.castShadow=true;
-b4.castShadow=true;
-b5.castShadow=true;
-b6.castShadow=true;
-b7.castShadow=true;
-b8.castShadow=true;
-b9.castShadow=true;
-
 scene.add(b1);scene.add(b2);scene.add(b3);
 scene.add(b4);scene.add(b5);scene.add(b6);
 scene.add(b7);scene.add(b8);scene.add(b9);
@@ -78,16 +59,6 @@ var c9 = new THREE.Mesh( geo_cilindro, m_cilindro );
 place_cilindro(c1,1,'C');place_cilindro(c2,2,'C');place_cilindro(c3,3,'C');
 place_cilindro(c4,4,'C');place_cilindro(c5,5,'C');place_cilindro(c6,6,'C');
 place_cilindro(c7,7,'C');place_cilindro(c8,8,'C');place_cilindro(c9,9,'C');
-
-c1.castShadow=true;
-c2.castShadow=true;
-c3.castShadow=true;
-c4.castShadow=true;
-c5.castShadow=true;
-c6.castShadow=true;
-c7.castShadow=true;
-c8.castShadow=true;
-c9.castShadow=true;
 
 scene.add(c1);scene.add(c2);scene.add(c3);
 scene.add(c4);scene.add(c5);scene.add(c6);
