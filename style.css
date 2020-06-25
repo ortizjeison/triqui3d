@@ -23,3 +23,8 @@ h1 {
 .big {
     width: 150px !important;
 }
+
+.carreta{
+    font-family: 'Pangolin';
+    font-size: 25px;
+}
