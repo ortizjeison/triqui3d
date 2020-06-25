@@ -7,7 +7,11 @@ canvas {
     display: block; 
 }
 
-h3{
+h3 {
     margin: 0px;
+    font-family: 'Pangolin', cursive;
+}
+
+h1 {
     font-family: 'Pangolin', cursive;
 }
