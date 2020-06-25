@@ -19,14 +19,20 @@ h1 {
 }
 
 .img{
-    max-width: 30%;
+    max-width: 60%;
 }
 
 .big {
-    width: 150px !important;
+    font-family: 'Pangolin';
+    font-size: 30px;
+    width: 400px !important;
 }
 
 .carreta{
     font-family: 'Pangolin';
     font-size: 20px;
+}
+
+.margin-top{
+    margin-top: 60px;
 }
