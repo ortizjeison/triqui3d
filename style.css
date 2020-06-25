@@ -10,10 +10,12 @@ canvas {
 h3 {
     margin: 0px;
     font-family: 'Pangolin', cursive;
+
 }
 
 h1 {
     font-family: 'Pangolin', cursive;
+    font-size: 60px;
 }
 
 .img{
@@ -26,5 +28,5 @@ h1 {
 
 .carreta{
     font-family: 'Pangolin';
-    font-size: 25px;
+    font-size: 20px;
 }
