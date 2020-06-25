@@ -26,7 +26,7 @@ scene.add(a1);scene.add(a2);scene.add(a3);
 scene.add(a4);scene.add(a5);scene.add(a6);
 scene.add(a7);scene.add(a8);scene.add(a9);
 
-                        //Tablero B
+//Tablero B
 var b1 = new THREE.Mesh( geo_cilindro, m_cilindro );
 var b2 = new THREE.Mesh( geo_cilindro, m_cilindro );
 var b3 = new THREE.Mesh( geo_cilindro, m_cilindro );
