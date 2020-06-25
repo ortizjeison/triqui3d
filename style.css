@@ -15,3 +15,11 @@ h3 {
 h1 {
     font-family: 'Pangolin', cursive;
 }
+
+.img{
+    max-width: 30%;
+}
+
+.big {
+    width: 150px !important;
+}
