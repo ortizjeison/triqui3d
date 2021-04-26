@@ -1,10 +1,10 @@
 //Add Board with Collada
 loader = new THREE.ColladaLoader();
-loader.load('https://triqui.cf/assets/board.dae', function(collada) {
+loader.load('https://triqui.tk/assets/board.dae', function(collada) {
 
   
   var la_propia_textura = new THREE.TextureLoader();
-  var textu = la_propia_textura.load( "https://triqui.cf/assets/casetas_final.jpg");
+  var textu = la_propia_textura.load( "https://triqui.tk/assets/casetas_final.jpg");
   var skyboxGeo = new THREE.SphereGeometry( 400, 400, 400);
   var mat = new THREE.MeshBasicMaterial( { map: textu});  
   var skybox = new THREE.Mesh( skyboxGeo, mat );
